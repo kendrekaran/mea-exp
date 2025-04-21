@@ -23,7 +23,7 @@
 }
 
 body {
-  background: var(--background);
+  background: #F9F9F9;
   color: black;
   font-family: Arial, Helvetica, sans-serif;
 }
