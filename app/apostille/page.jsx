@@ -5,7 +5,7 @@ import ProcessSteps from "../components/apostille/ProcessSteps";
 import PricingSection from "../components/apostille/ServiceFees";
 import AttestationVsApostille from "../components/apostille/AttestationVsApostille";
 import WhyChooseUs from "../components/apostille/WhyChooseUs";
-import ContactSection from "../components/services/ContactSection";
+import ContactSection from "../components/MEA_Attestation/ContactSection";
 
 export const metadata = {
   title: "Apostille Attestation Services | MEA EXPERT",

@@ -1,12 +1,12 @@
-import ServiceHeader from "../components/services/ServiceHeader";
-import AboutSection from "../components/services/MEAAttestationInfo";
-import DocumentsSection from "../components/services/DocumentTypes";
-import ProcessSection from "../components/services/ProcessSteps";
-import PricingSection from "../components/services/ServiceFees";
-import MEAvsMOFA from "../components/services/MEAvsMOFA";
-import WhyChooseUs from "../components/services/WhyChooseUs";
-import ContactSection from "../components/services/ContactSection";
-import FAQSection from "../components/services/FAQSection";
+import ServiceHeader from "../components/MEA_Attestation/ServiceHeader";
+import AboutSection from "../components/MEA_Attestation/MEAAttestationInfo";
+import DocumentsSection from "../components/MEA_Attestation/DocumentTypes";
+import ProcessSection from "../components/MEA_Attestation/ProcessSteps";
+import PricingSection from "../components/MEA_Attestation/ServiceFees";
+import MEAvsMOFA from "../components/MEA_Attestation/MEAvsMOFA";
+import WhyChooseUs from "../components/MEA_Attestation/WhyChooseUs";
+import ContactSection from "../components/MEA_Attestation/ContactSection";
+import FAQSection from "../components/MEA_Attestation/FAQSection";
 
 export const metadata = {
   title: "MEA Attestation Services | MEA EXPERT",

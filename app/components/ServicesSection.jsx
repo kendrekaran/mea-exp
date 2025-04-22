@@ -32,13 +32,15 @@ export default function MEAServices() {
       id: 4,
       title: "Embassy Attestation",
       description: "Legalize your documents with embassy attestation for Europe, Gulf countries, and more.",
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
+      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ",
+      link: "/mea-attestation"
     },
     {
       id: 5,
       title: "Chamber of Commerce",
       description: "Authenticate commercial documents like invoices, MOUs, and certificates with certified Chamber of Commerce attestation.",
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
+      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ",
+      link: "/chamber-commerce"
     },
     // {
     //   id: 6,
@@ -46,23 +48,26 @@ export default function MEAServices() {
     //   description: "Get expert help with PR, work permits, and immigration visas including documentation, apostille, and embassy requirements.",
     //   image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
     // },
+
+    {
+      id: 9,
+      title: "Translation Services",
+      description: "Professional translation of documents into foreign languages for visa, immigration, and legal compliance purposes.",
+      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ",
+      link: "/translation"
+    },
     {
       id: 7,
       title: "Visa assistance service",
       description: "Expert visa filing, documentation, and embassy guidance for countries like Canada, UK, USA, UAE, Australia, and more.",
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
+      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ",
+      link: "/mea-attestation"
     },
     {
       id: 8,
       title: "Study Abroad Assistance",
       description: "Get end-to-end support for overseas education including document attestation, apostille, visa filing, and university assistance.",
       image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
-    },
-    {
-      id: 9,
-      title: "Translation Services",
-      description: "Professional translation of documents into foreign languages for visa, immigration, and legal compliance purposes.",
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
     },
     {
       id: 10,

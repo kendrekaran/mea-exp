@@ -5,81 +5,82 @@ import {
   GraduationCap,
   ScrollText,
   BarChart3,
-  Search,
+  FileSpreadsheet,
   Baby,
   Heart,
-  ShieldCheck,
   FileText,
+  FileCheck,
   FileSignature,
-  Handshake,
-  Building2
+  Building2,
+  Files,
+  PenTool
 } from 'lucide-react';
 
 const categories = {
   educational: [
     {
       icon: GraduationCap,
-      title: 'Degree Certificates',
-      description: "Bachelor's, Master's, and Doctoral degrees from recognized universities.",
+      title: 'Degree & Diploma Certificates',
+      description: "Bachelor's, Master's, and PhD certificates from recognized universities",
     },
     {
       icon: ScrollText,
-      title: 'Diploma Certificates',
-      description: 'Diplomas and certificates from technical institutions and colleges.',
+      title: 'HSC / SSC Marksheets',
+      description: 'Secondary and higher secondary education mark sheets',
     },
     {
       icon: BarChart3,
-      title: 'Mark Sheets',
-      description: 'Academic transcripts and mark sheets from schools, colleges, and universities.',
+      title: 'Technical Course Certificates',
+      description: 'Professional and vocational course certificates',
     },
     {
-      icon: Search,
+      icon: FileSpreadsheet,
       title: 'Other Educational Documents',
-      description: 'Transfer certificates, bona fide certificates, and more.',
+      description: 'Transcripts, course completion certificates, etc.',
     },
   ],
   personal: [
     {
-      icon: Baby,
-      title: 'Birth Certificates',
-      description: 'Official birth records issued by authorities or hospitals.',
-    },
-    {
       icon: Heart,
-      title: 'Marriage Certificates',
-      description: 'Legal marriage documents registered with government authorities.',
+      title: 'Marriage Certificate',
+      description: 'Marriage registration and ceremonial certificates',
     },
     {
-      icon: ShieldCheck,
-      title: 'Police Clearance Certificate (PCC)',
-      description: 'Certificate verifying no criminal record from police authorities.',
+      icon: Baby,
+      title: 'Birth Certificate',
+      description: 'Birth records and registration documents',
+    },
+    {
+      icon: FileCheck,
+      title: 'Police Clearance Certificate',
+      description: 'PCC for visa and immigration purposes',
     },
     {
       icon: FileText,
       title: 'Other Personal Documents',
-      description: 'Death certificates, divorce decrees, name change certificates, etc.',
+      description: 'Affidavits, medical records, divorce certificates',
     },
   ],
   commercial: [
     {
+      icon: Files,
+      title: 'Invoices & Bills',
+      description: 'Commercial invoices and business documents',
+    },
+    {
       icon: FileSignature,
       title: 'Power of Attorney',
-      description: 'Legal documents for business or personal representation.',
-    },
-    {
-      icon: FileText,
-      title: 'Invoices',
-      description: 'Commercial invoices for international trade and transactions.',
-    },
-    {
-      icon: Handshake,
-      title: 'Company Agreements',
-      description: 'Contracts, partnership deeds, MoUs, etc.',
+      description: 'Legal authorization documents',
     },
     {
       icon: Building2,
-      title: 'Other Commercial Documents',
-      description: 'Incorporation certificates, resolutions, export-import docs.',
+      title: 'Company Documents',
+      description: 'Incorporation papers and business registration',
+    },
+    {
+      icon: PenTool,
+      title: 'Legal Documents',
+      description: 'MoA, AoA, and other corporate documents',
     },
   ],
 };
@@ -117,26 +118,26 @@ export default function DocumentsSection() {
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-14">
           <h6 className="text-cyan-600 font-semibold tracking-wider mb-3">DOCUMENTATION</h6>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Documents That Require MEA Attestation</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">Types of Documents Attested by Embassies</h2>
           <div className="w-24 h-1 bg-cyan-600 mx-auto mb-8"></div>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-            We assist with attestation for various types of documents. Choose a category below to explore.
+            We provide embassy attestation services for various types of documents. Select a category to learn more.
           </p>
         </div>
 
         <div className="flex justify-center gap-4 mb-10 flex-wrap">
           <CategoryButton
-            label="Educational"
+            label="Educational Documents"
             active={activeCategory === 'educational'}
             onClick={() => setActiveCategory('educational')}
           />
           <CategoryButton
-            label="Personal"
+            label="Personal Documents"
             active={activeCategory === 'personal'}
             onClick={() => setActiveCategory('personal')}
           />
           <CategoryButton
-            label="Commercial"
+            label="Commercial Documents"
             active={activeCategory === 'commercial'}
             onClick={() => setActiveCategory('commercial')}
           />
