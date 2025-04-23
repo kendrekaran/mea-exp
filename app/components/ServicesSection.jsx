@@ -33,7 +33,7 @@ export default function MEAServices() {
       title: "Embassy Attestation",
       description: "Legalize your documents with embassy attestation for Europe, Gulf countries, and more.",
       image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ",
-      link: "/mea-attestation"
+      link: "/embassy-attestation"
     },
     {
       id: 5,

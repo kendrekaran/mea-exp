@@ -1,4 +1,5 @@
 import { CheckCircle, DollarSign, Info, CreditCard, FileText } from "lucide-react";
+import Link from "next/link";
 
 const PricingSection = () => {
   return (
@@ -34,10 +35,11 @@ const PricingSection = () => {
               </li>
             </ul>
 
+            <Link href="/contact">
             <button className="w-full py-4 rounded-3xl text-lg mb-4 bg-[#0A9DB2] text-white hover:bg-cyan-700 transition-colors">
               Contact Now
             </button>
-            
+            </Link>
             <p className="text-sm text-gray-500 text-center">Contact us for a quick quote tailored to your requirements.</p>
           </div>
         </div>

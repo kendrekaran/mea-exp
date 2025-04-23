@@ -1,6 +1,7 @@
 'use client';
 
 import { FileCheck, Clock, Users, Globe2 } from 'lucide-react';
+import Link from 'next/link';
 
 const FeatureCard = ({ icon: Icon, title, description }) => (
   <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-shadow">
@@ -63,9 +64,11 @@ export default function WhyChooseUs() {
                 Contact us now for quick and reliable documentation
               </p>
             </div>
+            <Link href="/contact">
             <button className="bg-[#0A9DB2] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#098699] transition">
               Contact Us
             </button>
+            </Link>
           </div>
         </div>
       </div>

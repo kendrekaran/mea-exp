@@ -1,6 +1,7 @@
 'use client';
 
 import { GraduationCap, FileCheck, Target, Users, HeadphonesIcon, Briefcase } from 'lucide-react';
+import Link from 'next/link';
 
 const features = [
   {
@@ -76,9 +77,11 @@ export default function WhyChooseUs() {
                 Get in touch now for a free consultation and step-by-step guidance!
               </p>
             </div>
+            <Link href="/contact">
             <button className="bg-[#0A9DB2] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#098699] transition">
               Contact Us
             </button>
+            </Link>
           </div>
         </div>
       </div>

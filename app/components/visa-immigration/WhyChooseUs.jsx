@@ -1,6 +1,7 @@
 'use client';
 
 import { ShieldCheck, Globe2, Brain, CheckSquare, FileStack, Truck } from 'lucide-react';
+import Link from 'next/link';
 
 const features = [
   {
@@ -76,9 +77,11 @@ export default function WhyChooseUs() {
                 Contact us now for a free consultation or document review
               </p>
             </div>
+            <Link href="/contact">
             <button className="bg-[#0A9DB2] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#098699] transition">
               Contact Us
             </button>
+            </Link>
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 'use client';
 
-import { Phone, Mail, ArrowRight } from 'lucide-react';
+import { Phone, Mail, ArrowRight, MessageSquare } from 'lucide-react';
 
 export default function ContactSection() {
   return (
@@ -26,20 +26,13 @@ export default function ContactSection() {
               </p>
               
               <div className="flex flex-col md:flex-row items-center justify-center gap-6">
-                <a 
-                  href="tel:+919XXXXXXXX" 
-                  className="flex items-center gap-2 bg-[#0A9DB2] hover:bg-[#087d8f] text-white py-3 px-6 rounded-md transition-colors duration-200"
-                >
-                  <Phone className="h-5 w-5" />
+              <a href="tel:+917878868595" className="flex items-center space-x-2 bg-[#0A9DB2] hover:bg-[#098da0] text-white py-3 px-6 rounded-lg transition-colors shadow-sm">
+                  <Phone className="w-5 h-5" />
                   <span>Call Now</span>
                 </a>
-                
-                <a 
-                  href="#contact-form" 
-                  className="flex items-center gap-2 border-2 border-[#0A9DB2] text-[#0A9DB2] hover:bg-[#0A9DB2] hover:text-white py-3 px-6 rounded-md transition-colors duration-200"
-                >
-                  <Mail className="h-5 w-5" />
-                  <span>Send Enquiry</span>
+                <a href="mailto:info@meaexpert.com" className="flex items-center space-x-2 bg-white border border-[#0A9DB2] text-[#0A9DB2] hover:bg-blue-50 py-3 px-6 rounded-lg transition-colors shadow-sm">
+                  <MessageSquare className="w-5 h-5" />
+                  <span>Email Us</span>
                 </a>
               </div>
               
