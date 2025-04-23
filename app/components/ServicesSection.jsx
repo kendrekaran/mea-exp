@@ -61,19 +61,22 @@ export default function MEAServices() {
       title: "Visa assistance service",
       description: "Expert visa filing, documentation, and embassy guidance for countries like Canada, UK, USA, UAE, Australia, and more.",
       image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ",
-      link: "/mea-attestation"
+      link: "/visa-immigration"
     },
     {
       id: 8,
       title: "Study Abroad Assistance",
       description: "Get end-to-end support for overseas education including document attestation, apostille, visa filing, and university assistance.",
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
+      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ",
+      link: "/study-abroad"
+
     },
     {
       id: 10,
       title: "Travel Insurance",
       description: "Secure your travel with visa-compliant insurance policies tailored for students, tourists, and business travelers.",
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
+      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ",
+      link: "/travel-documentation"
     },
     // {
     //   id: 11,
