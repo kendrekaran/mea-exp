@@ -166,7 +166,7 @@ const Navbar = () => {
         </div>
 
         <nav className={`${isMenuOpen ? "flex" : "hidden"} w-full flex-col items-center space-y-4 md:flex md:w-auto md:flex-row md:space-x-4 lg:space-x-8 md:space-y-0`}>
-          <Link href="/" className="text-lg font-medium text-gray-700 transition-colors hover:text-[#0A9DB2]">
+          <Link href="/" className="text-lg font-semibold text-gray-700 transition-colors hover:text-[#0A9DB2]">
             Home
           </Link>
           
@@ -174,11 +174,11 @@ const Navbar = () => {
           <div className="relative" ref={servicesDropdownRef}>
             <button
               onClick={() => setIsServicesOpen(!isServicesOpen)}
-              className="text-lg flex font-medium text-gray-700 transition-colors hover:text-[#0A9DB2]"
+              className="text-lg flex font-semibold text-gray-700  transition-colors hover:text-[#0A9DB2]"
             >
               Services
               <ChevronDown 
-                className={`ml-1 mt-1.5 h-4 w-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} 
+                className={`ml-1 mt-1.5 h-4 w-4 transition-transform ${isServicesOpen ? 'rotate-180 font-semibold' : ''}`} 
               />
             </button>
 
@@ -206,11 +206,11 @@ const Navbar = () => {
           <div className="relative" ref={documentsDropdownRef}>
             <button
               onClick={() => setIsDocumentsOpen(!isDocumentsOpen)}
-              className="text-lg flex font-medium text-gray-700 transition-colors hover:text-[#0A9DB2]"
+              className="text-lg flex font-semibold text-gray-700 transition-colors hover:text-[#0A9DB2]"
             >
               Documents
               <ChevronDown 
-                className={`ml-1 mt-1.5 h-4 w-4 transition-transform ${isDocumentsOpen ? 'rotate-180' : ''}`} 
+                className={`ml-1 font-semibold mt-1.5 h-4 w-4 transition-transform ${isDocumentsOpen ? 'rotate-180' : ''}`} 
               />
             </button>
 
@@ -234,19 +234,19 @@ const Navbar = () => {
             )}
           </div>
 
-          <Link href="#country" className="text-lg font-medium text-gray-700 transition-colors hover:text-[#0A9DB2]">
+          <Link href="#country" className="text-lg  text-gray-700 transition-colors hover:text-[#0A9DB2] font-semibold">
             Countries
           </Link>
           
-          <Link href="/study-abroad" className="text-lg font-medium text-gray-700 transition-colors hover:text-[#0A9DB2]">
+          <Link href="/study-abroad" className="text-lg font-semibold text-gray-700 transition-colors hover:text-[#0A9DB2]">
             Abroad Study
           </Link>
         </nav>
 
-        <div className={`${isMenuOpen ? "flex" : "hidden"} mt-4 w-full justify-center md:mt-0 md:flex md:w-auto`}>
+        <div className={`${isMenuOpen ? "flex" : "hidden"} mt-5 w-full justify-center md:mt-0 md:flex md:w-auto`}>
           <Link
             href="/contact"
-            className="rounded-md bg-[#0A9DB2] px-6 py-2 text-base font-medium text-white transition-all hover:bg-[#0A9DB2] hover:shadow-lg w-full md:w-auto text-center"
+            className="rounded-md bg-[#0A9DB2] px-8 py-3 text-lg font-semibold text-white transition-all hover:bg-[#0A9DB2] hover:shadow-lg w-full md:w-auto text-center"
           >
             Contact us
           </Link>

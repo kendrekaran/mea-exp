@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function AboutSection() {
   return (
-    <section className="py-20 px-4 md:px-8 lg:px-16 max-w-7xl mx-auto">
+    <section className="pt-20 md:pb-4 px-4 md:px-8 lg:px-16 max-w-7xl mx-auto">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-start">
         <div className="flex flex-col">
           <h3 className="text-[#0A9DB2] md:px-4 text-medium text-xl md:text-2xl font-medium mb-3">

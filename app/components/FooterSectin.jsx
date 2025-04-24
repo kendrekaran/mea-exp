@@ -133,7 +133,6 @@ export default function FooterSection() {
                   </svg>
                   <p className="text-gray-300 text-sm md:text-base">+ 91 8178636828</p>
                 </div>
-                
               </div>
             </div>
           </div>

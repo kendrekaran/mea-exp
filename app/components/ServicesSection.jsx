@@ -74,7 +74,7 @@ export default function MEAServices() {
   ];
 
   return (
-    <div className=" py-16">
+    <div className=" py-16  md:pb-16 md:py-0">
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="text-center mb-16">
           

@@ -49,7 +49,7 @@ export default function StatsSection() {
   }, []);
   
   return (
-    <div ref={sectionRef} className="flex flex-wrap justify-center py-16 gap-6 p-6">
+    <div ref={sectionRef} className="flex pt-4 flex-wrap justify-center py-0 gap-6 ">
       {stats.map((stat, index) => (
         <div key={index} className="bg-white rounded-lg shadow-xl p-8 flex flex-col items-center w-80">
           <img src={stat.icon} alt={stat.label} className="h-16 w-16 text-teal-500 mb-4" />
