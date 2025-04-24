@@ -26,19 +26,76 @@ export const metadata = {
   canonical: 'https://meaexpert.com/mea-attestation',
 };
 
+export const generateSchemaMarkup = () => {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "MEA Attestation Services",
+    "description": "Official MEA (Ministry of External Affairs) attestation services for all types of documents including educational, commercial, and personal documents.",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "MEA Expert",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "MB-03, A-Block Naurang House, K.G. Marg",
+        "addressLocality": "New Delhi",
+        "postalCode": "110001",
+        "addressCountry": "IN"
+      }
+    },
+    "serviceType": "Document Attestation",
+    "areaServed": "IN",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "MEA Attestation Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Educational Document Attestation"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Commercial Document Attestation"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Personal Document Attestation"
+          }
+        }
+      ]
+    }
+  };
+};
+
 export default function ServicesPage() {
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Service Header */}
-      <ServiceHeader />
-      <AboutSection />
-      <DocumentsSection />
-      <ProcessSection />
-      <PricingSection />
-      <MEAvsMOFA />
-      <WhyChooseUs />
-      <FAQSection />
-      <ContactSection />
-    </div>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateSchemaMarkup())
+        }}
+      />
+      <div className="min-h-screen bg-gray-50">
+        {/* Service Header */}
+        <ServiceHeader />
+        <AboutSection />
+        <DocumentsSection />
+        <ProcessSection />
+        <PricingSection />
+        <MEAvsMOFA />
+        <WhyChooseUs />
+        <FAQSection />
+        <ContactSection />
+      </div>
+    </>
   );
 }
