@@ -7,10 +7,9 @@ import { ChevronDown, Mail, Phone } from "lucide-react"
 import Navbar from "./Navbar"
 
 export default function HeroSection() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <div className="w-full bg-[#F9F9F9]">
+    <div className="w-full bg-[#f9f9f9]">
       {/* Navigation Bar */}
       <Navbar />
       
@@ -40,14 +39,14 @@ export default function HeroSection() {
             </div>
           </div>
 
-          <div className="relative mt-6 md:mt-0">
-            <div className="relative overflow-hidden rounded-2xl">
+          <div className="relative mt-6  md:mt-0">
+            <div className="relative rotate-[4deg] overflow-hidden rounded-xl md:rounded-3xl">
               <Image
-                src="/hero.webp"
+                src="/hero1.webp"
                 alt="Passport and travel documents"
-                width={600}
-                height={600}
-                className="h-auto w-full max-h-[300px] md:max-h-none md:h-[40vh] lg:h-[50vh] xl:h-[60vh] object-contain"
+                width={700}
+                height={700}
+                className="h-auto rounded-xl md:rounded-3xl w-full max-h-[400px] md:max-h-none md:h-[40vh] lg:h-[50vh] xl:h-[70vh] lg:w-[100vw] object-contain"
               />
             </div>
 

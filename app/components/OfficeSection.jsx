@@ -36,7 +36,6 @@ export default function OfficeSection() {
                 MB-03, A-Block Naurang House K.G.
                 <br />
                 Marg Connaught Place New Delhi
-                <br />
                 -110001
               </p>
             </div>
@@ -75,13 +74,13 @@ export default function OfficeSection() {
               />
             </div>
             <div className="p-6 flex flex-col flex-grow">
-              <h3 className="text-xl font-bold mb-2">Other Offices</h3>
-              <p className="text-gray-600 mb-1">+ 91 7878868595</p>
+              <h3 className="text-xl font-bold mb-2">Bangalore</h3>
+              <p className="text-gray-600 mb-1">+ 91 9319333405</p>
               <p className="text-gray-600 mb-4">info@meaexpert.com</p>
               <p className="text-gray-500 text-sm mt-auto">
-              Karnataka, Banglore,
-                <br />
-              Gujarat, Ahmedabad
+              Kundalahalli Colony Above Ramdev Medicals,
+              <br />
+              7th Cross Kundalahalli Colony, Bangalore -560037
               </p>
             </div>
           </div>

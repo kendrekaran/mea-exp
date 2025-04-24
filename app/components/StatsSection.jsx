@@ -8,18 +8,21 @@ export default function StatsSection() {
   const stats = [
     {
       icon: "/stats1.svg",
-      value: 100000,
-      label: "Total Documents Served"
+      value: 160000,
+      label: "Total Documents Served",
+      format: "k"
     },
     {
       icon: "/stats2.svg",
-      value: 3000,
-      label: "Doc. Submitted Today"
+      value: 120,
+      label: "Doc. Submitted Today",
+      format: "normal"
     },
     {
       icon: "/stats3.svg",
-      value: 50000,
-      label: "Happy Customers"
+      value: 70000,
+      label: "Happy Customers",
+      format: "k"
     }
   ];
   
@@ -51,7 +54,13 @@ export default function StatsSection() {
         <div key={index} className="bg-white rounded-lg shadow-xl p-8 flex flex-col items-center w-80">
           <img src={stat.icon} alt={stat.label} className="h-16 w-16 text-teal-500 mb-4" />
           <h2 className="text-4xl font-bold mb-2">
-            <CountUp end={stat.value} start={0} duration={2} visible={isVisible} />
+            <CountUp 
+              end={stat.value} 
+              start={0} 
+              duration={2} 
+              visible={isVisible}
+              format={stat.format}
+            />+
           </h2>
           <p className="text-gray-600 text-center">{stat.label}</p>
         </div>
@@ -60,7 +69,7 @@ export default function StatsSection() {
   );
 }
 
-function CountUp({ end, start = 0, duration = 2, visible }) {
+function CountUp({ end, start = 0, duration = 2, visible, format = "normal" }) {
   const [count, setCount] = useState(start);
   const countRef = useRef(start);
   const frameRef = useRef(0);
@@ -98,8 +107,10 @@ function CountUp({ end, start = 0, duration = 2, visible }) {
     };
   }, [end, start, duration, visible]);
   
-  // Format large numbers with commas
-  const formattedCount = count.toLocaleString();
+  // Format the count based on the format prop
+  const formattedCount = format === "k" 
+    ? `${(count / 1000).toFixed(0)}k`
+    : count.toLocaleString();
   
   return <>{formattedCount}</>;
 }

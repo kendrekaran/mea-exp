@@ -136,7 +136,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <header className="border-b border-gray-100 bg-[#F9F9F9] sticky top-0 z-50">
+    <header className="border-b border-gray-100 bg-[#f9f9f9] sticky top-0 z-50">
       <div className="container mx-auto flex flex-col items-center justify-between px-4 py-3 md:flex-row md:py-4">
         <div className="flex w-full items-center justify-between md:w-auto">
           <Link href="/" className="flex items-center">
