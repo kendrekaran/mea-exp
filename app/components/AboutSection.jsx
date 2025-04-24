@@ -22,7 +22,7 @@ export default function AboutSection() {
               alt="Attestation service representative helping a client with documents"
               fill
               className="lg:max-h-96 object-cover"
-              priority
+              loading="lazy"
             />
           </div>
         </div>

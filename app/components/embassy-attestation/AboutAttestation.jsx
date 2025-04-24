@@ -36,7 +36,7 @@ export default function AboutAttestation() {
           alt="Embassy requirements illustration"
           fill
           className="object-cover"
-          priority
+          loading="lazy"
             />
           </div>
         </div>
@@ -51,7 +51,7 @@ export default function AboutAttestation() {
             alt="Embassy requirements illustration"
             fill
             className="object-cover"
-            priority
+            loading="lazy"
           />
         </div>
 

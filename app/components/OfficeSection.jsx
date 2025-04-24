@@ -26,6 +26,7 @@ export default function OfficeSection() {
                 alt="New Delhi Office"
                 fill
                 className="object-cover"
+                loading="lazy"
               />
             </div>
             <div className="p-6 flex flex-col flex-grow">
@@ -49,6 +50,7 @@ export default function OfficeSection() {
                 alt="Gujrat Office"
                 fill
                 className="object-cover"
+                loading="lazy"
               />
             </div>
             <div className="p-6 flex flex-col flex-grow">
@@ -71,6 +73,7 @@ export default function OfficeSection() {
                 alt="Gurgaon Office"
                 fill
                 className="object-cover"
+                loading="lazy"
               />
             </div>
             <div className="p-6 flex flex-col flex-grow">

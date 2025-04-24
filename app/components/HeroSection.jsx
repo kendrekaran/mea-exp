@@ -46,6 +46,7 @@ export default function HeroSection() {
                 alt="Passport and travel documents"
                 width={700}
                 height={700}
+                priority
                 className="h-auto rounded-xl md:rounded-3xl w-full max-h-[400px] md:max-h-none md:h-[40vh] lg:h-[50vh] xl:h-[70vh] lg:w-[100vw] object-contain"
               />
             </div>

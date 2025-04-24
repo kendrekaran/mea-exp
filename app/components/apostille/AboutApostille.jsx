@@ -18,7 +18,7 @@ export default function AboutApostille() {
                             alt="Apostille attestation document example"
                             fill
                             className="object-cover"
-                            priority
+                            loading="lazy"
                         />
                     </div>
                 </div>

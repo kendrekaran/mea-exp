@@ -70,7 +70,7 @@ export default function AboutAttestation() {
             alt="Document attestation process illustration"
             fill
             className="object-cover"
-            priority
+            loading="lazy"
           />
         </div>
       </div>

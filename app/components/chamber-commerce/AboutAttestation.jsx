@@ -50,7 +50,7 @@ export default function AboutAttestation() {
                 alt="Chamber of Commerce attestation illustration"
                 fill
                 className="object-cover"
-                priority
+                loading="lazy"
                   />
                 </div>
               </div>
