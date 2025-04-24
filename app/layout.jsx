@@ -13,9 +13,52 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "MEA Expert : Best Attestation Services in India - Fast, Reliable & Government-Recognized",
-  description: "All Document Types | MEA, Embassy, HRD, Visa Services | 100% Genuine & Timely Processing",
+  title: "MEA Expert: India’s Trusted Attestation & Apostille Services - Fast, Reliable, Govt-Recognized",
+  description:
+    "Get 100% genuine document attestation and apostille services for MEA, Embassy, HRD & Visa. Fast processing, expert support, and doorstep service across India.",
+  keywords: [
+    "attestation services",
+    "apostille India",
+    "MEA attestation",
+    "embassy attestation",
+    "HRD attestation",
+    "document verification",
+    "visa document attestation"
+  ],
+  metadataBase: new URL("https://meaexpert.com"),
+  alternates: {
+    canonical: "https://meaexpert.com",
+  },
+  openGraph: {
+    title: "MEA Expert - Fast & Trusted Document Attestation Services in India",
+    description:
+      "Professional attestation and apostille services for all types of documents including MEA, Embassy, HRD & Visa. PAN India support.",
+    url: "https://meaexpert.com",
+    siteName: "MEA Expert",
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: "https://meaexpert.com/logo.png",
+        width: 800,
+        height: 600,
+        alt: "MEA Expert Logo",
+      },
+    ],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      maxSnippet: -1,
+      maxImagePreview: "large",
+      maxVideoPreview: -1,
+    },
+  },
 };
+
 
 export default function RootLayout({ children }) {
   const structuredData = [
