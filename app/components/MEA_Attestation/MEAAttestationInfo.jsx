@@ -12,7 +12,7 @@ const AboutSection = () => {
         
         <div className="bg-white rounded-xl shadow-lg p-8 md:p-12">
           <p className="text-lg text-gray-800 mb-6 leading-relaxed">
-            MEA Attestation refers to the legal verification of documents by the Ministry of External Affairs, Government of India. 
+          <b>MEA Attestation</b> refers to the legal verification of documents by the Ministry of External Affairs, Government of India. 
             This process validates that your documents are genuine and can be accepted internationally.
           </p>
           

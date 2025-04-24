@@ -54,7 +54,7 @@ export default function OfficeSection() {
             </div>
             <div className="p-6 flex flex-col flex-grow">
               <h3 className="text-xl font-bold mb-2">Haryana</h3>
-              <p className="text-gray-600 mb-1">8178636828, 7503760950</p>
+              <p className="text-gray-600 mb-1">+ 91 8178636828, + 91 7503760950</p>
               <p className="text-gray-600 mb-4">info@meaexpert.com</p>
               <p className="text-gray-500 text-sm mt-auto">
                 Surya nagar sector 91, Faridabad
@@ -79,9 +79,9 @@ export default function OfficeSection() {
               <p className="text-gray-600 mb-1">+ 91 7878868595</p>
               <p className="text-gray-600 mb-4">info@meaexpert.com</p>
               <p className="text-gray-500 text-sm mt-auto">
-                Gujarat, Banglore,
+              Karnataka, Banglore,
                 <br />
-                Ahmedabad, Karnataka
+              Gujarat, Ahmedabad
               </p>
             </div>
           </div>

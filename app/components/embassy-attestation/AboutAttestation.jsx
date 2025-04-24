@@ -21,7 +21,7 @@ export default function AboutAttestation() {
             
             <div className="space-y-6">
           <p className="text-gray-600 text-lg leading-relaxed">
-            Embassy Attestation is the process where the respective foreign country's embassy in India certifies your documents after <span className="font-semibold">MEA (Ministry of External Affairs)</span> attestation. It confirms that your certificates are <span className="font-semibold">genuine and legally valid</span> for visa, employment, or higher education abroad.
+          <b>Embassy Attestation</b> is the process where the respective foreign country's embassy in India certifies your documents after <span className="font-semibold">MEA (Ministry of External Affairs)</span> attestation. It confirms that your certificates are <span className="font-semibold">genuine and legally valid</span> for visa, employment, or higher education abroad.
           </p>
           <p className="text-gray-600 text-lg leading-relaxed">
             It is often followed by <span className="font-semibold">MOFA Attestation</span> (Ministry of Foreign Affairs) in the destination country.

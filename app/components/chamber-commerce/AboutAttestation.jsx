@@ -38,7 +38,7 @@ export default function AboutAttestation() {
                   
                   <div className="space-y-6">
                 <p className="text-gray-600 text-lg leading-relaxed">
-                  Chamber Attestation is the authentication of commercial documents by the regional Chamber of Commerce. This attestation confirms the <span className="font-semibold">legitimacy of company documents</span> before they are legalized by the <span className="font-semibold">Ministry of External Affairs (MEA)</span> and the Embassy of the destination country.
+                  <b>Chamber Attestation </b> is the authentication of commercial documents by the regional Chamber of Commerce. This attestation confirms the <span className="font-semibold">legitimacy of company documents</span> before they are legalized by the <span className="font-semibold">Ministry of External Affairs (MEA)</span> and the Embassy of the destination country.
                 </p>
                   </div>
                   

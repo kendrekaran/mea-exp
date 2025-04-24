@@ -38,7 +38,7 @@ export default function AboutAttestation() {
           </h2>
 
           <p className="text-gray-600 mb-6 text-lg leading-relaxed">
-            HRD Attestation refers to the authentication of educational certificates by the Human Resource Development (HRD) department of the respective Indian state. It is a mandatory step before MEA attestation or apostille attestation for educational documents.
+          <b>HRD Attestation</b> refers to the authentication of educational certificates by the Human Resource Development (HRD) department of the respective Indian state. It is a mandatory step before MEA attestation or apostille attestation for educational documents.
           </p>
 
           <div className="space-y-4">
@@ -81,7 +81,7 @@ export default function AboutAttestation() {
           What is Home Department Attestation?
         </h3>
         <p className="text-gray-600 mb-8">
-          The Home Department attestation is typically done for personal documents and is a prerequisite step before apostille or embassy attestation, especially for countries not under the Hague Convention.
+          The <b>Home Department attestation</b> is typically done for personal documents and is a prerequisite step before apostille or embassy attestation, especially for countries not under the Hague Convention.
         </p>
         <div className="grid md:grid-cols-2 gap-4">
           {HomeDocumentList.map((doc, index) => (

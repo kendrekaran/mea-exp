@@ -25,7 +25,7 @@ export default function AboutApostille() {
 
                 <div className="flex flex-col mt-0 md:mt-[90px]">
                     <p className="text-gray-600 mb-8 text-base md:text-lg leading-relaxed">
-                        The apostille meaning refers to a type of attestation where documents are legalized by the Ministry of External Affairs (MEA), Government of India. An apostille is a square-shaped sticker with a unique identification number — accepted by all Hague Convention member countries.
+                        The <b>Apostille</b> meaning refers to a type of attestation where documents are legalized by the Ministry of External Affairs (MEA), Government of India. An apostille is a square-shaped sticker with a unique identification number — accepted by all Hague Convention member countries.
                     </p>
 
                     <div className="space-y-6">
