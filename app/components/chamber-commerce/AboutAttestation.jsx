@@ -46,7 +46,7 @@ export default function AboutAttestation() {
                 
                 <div className="order-1 md:order-2 relative w-full h-[350px] md:h-[450px] rounded-xl overflow-hidden shadow-lg">
                   <Image
-                src="/about1.svg"
+                src="https://i.pinimg.com/736x/6f/d9/01/6fd901385758def2fd4704e47dbae77a.jpg"
                 alt="Chamber of Commerce attestation illustration"
                 fill
                 className="object-cover"

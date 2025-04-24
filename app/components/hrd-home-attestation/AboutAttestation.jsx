@@ -66,7 +66,7 @@ export default function AboutAttestation() {
 
         <div className="relative w-full h-96 rounded-lg overflow-hidden shadow-md">
           <Image
-            src="/about1.svg"
+            src="https://i.pinimg.com/474x/1f/42/fc/1f42fc28efecaee5c63be08a301cf993.jpg"
             alt="Document attestation process illustration"
             fill
             className="object-cover"

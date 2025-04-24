@@ -7,7 +7,7 @@ export default function OfficeSection() {
   return (
     <div className="container mx-auto px-4 py-12 max-w-7xl">
       {/* Our Offices Section */}
-      <div className="mt-24 mb-16">
+      <div className="mt-12 mb-16">
         <div className="text-center mb-24">
           <h2 className="text-xl poppins-medium mb-2">Our Offices</h2>
           <h1 className="text-5xl poppins-medium mb-4">
@@ -22,7 +22,7 @@ export default function OfficeSection() {
           <div className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-[400px]">
             <div className="h-[200px] relative">
               <Image
-                src="/office1.svg?height=200&width=400"
+                src="https://i.pinimg.com/474x/d6/db/05/d6db054449ae5515da69a959d2d14704.jpg?height=200&width=400"
                 alt="New Delhi Office"
                 fill
                 className="object-cover"
@@ -31,7 +31,7 @@ export default function OfficeSection() {
             <div className="p-6 flex flex-col flex-grow">
               <h3 className="text-xl font-bold mb-2">New Delhi</h3>
               <p className="text-gray-600 mb-1">+ 91 7878868595</p>
-              <p className="text-gray-600 mb-4">contact@meaexpert.com</p>
+              <p className="text-gray-600 mb-4">info@meaexpert.com</p>
               <p className="text-gray-500 text-sm mt-auto">
                 MB-03, A-Block Naurang House K.G.
                 <br />
@@ -42,102 +42,51 @@ export default function OfficeSection() {
             </div>
           </div>
 
-          {/* Gujrat Card */}
+          {/* Haryana Card */}
           <div className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-[400px]">
             <div className="h-[200px] relative">
               <Image
-                src="/office1.svg?height=200&width=400"
+                src="https://i.pinimg.com/474x/3c/3d/10/3c3d10029c38098b94966a62a3cfa3a0.jpg?height=200&width=400"
                 alt="Gujrat Office"
                 fill
                 className="object-cover"
               />
             </div>
             <div className="p-6 flex flex-col flex-grow">
-              <h3 className="text-xl font-bold mb-2">Gujrat</h3>
-              <p className="text-gray-600 mb-1">+ 91 7878868595</p>
-              <p className="text-gray-600 mb-4">contact@meaexpert.com</p>
+              <h3 className="text-xl font-bold mb-2">Haryana</h3>
+              <p className="text-gray-600 mb-1">8178636828, 7503760950</p>
+              <p className="text-gray-600 mb-4">info@meaexpert.com</p>
               <p className="text-gray-500 text-sm mt-auto">
-                MB-03, A-Block Naurang House K.G.
+                Surya nagar sector 91, Faridabad
                 <br />
-                Marg Connaught Place New Delhi
-                <br />
-                -110001
+                Sco market sector 84 Dwarka expressway, Gurugram
               </p>
             </div>
           </div>
 
-          {/* Gurgaon Card */}
+          {/* Others Card */}
           <div className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-[400px]">
             <div className="h-[200px] relative">
               <Image
-                src="/office1.svg?height=200&width=400"
+                src="https://i.pinimg.com/474x/01/b3/21/01b3211f103f49432f273bb72ca7b99d.jpg?height=200&width=400"
                 alt="Gurgaon Office"
                 fill
                 className="object-cover"
               />
             </div>
             <div className="p-6 flex flex-col flex-grow">
-              <h3 className="text-xl font-bold mb-2">Gurgaon</h3>
+              <h3 className="text-xl font-bold mb-2">Other Offices</h3>
               <p className="text-gray-600 mb-1">+ 91 7878868595</p>
-              <p className="text-gray-600 mb-4">contact@meaexpert.com</p>
+              <p className="text-gray-600 mb-4">info@meaexpert.com</p>
               <p className="text-gray-500 text-sm mt-auto">
-                MB-03, A-Block Naurang House K.G.
+                Gujarat, Banglore,
                 <br />
-                Marg Connaught Place New Delhi
-                <br />
-                -110001
+                Ahmedabad, Karnataka
               </p>
             </div>
           </div>
 
 
-          {/* Banglore Card */}
-          <div className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-[400px]">
-             <div className="h-[200px] relative">
-              <Image
-                src="/office1.svg?height=200&width=400"
-                alt="Banglore Office"
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div className="p-6 flex flex-col flex-grow">
-              <h3 className="text-xl font-bold mb-2">Banglore</h3>
-              <p className="text-gray-600 mb-1">+ 91 7878868595</p>
-              <p className="text-gray-600 mb-4">contact@meaexpert.com</p>
-              <p className="text-gray-500 text-sm mt-auto">
-                MB-03, A-Block Naurang House K.G.
-                <br />
-                Marg Connaught Place New Delhi
-                <br />
-                -110001
-              </p>
-            </div>
-          </div>
-
-          {/* Haryana Office Card */}
-          <div className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-[400px]">
-            <div className="h-[200px] relative">
-              <Image
-                src="/office1.svg?height=200&width=400"
-                alt="Haryana Office"
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div className="p-6 flex flex-col flex-grow">
-              <h3 className="text-xl font-bold mb-2">Haryana Office</h3>
-              <p className="text-gray-600 mb-1">+ 91 7878868595</p>
-              <p className="text-gray-600 mb-4">contact@meaexpert.com</p>
-              <p className="text-gray-500 text-sm mt-auto">
-                MB-03, A-Block Naurang House K.G.
-                <br />
-                Marg Connaught Place New Delhi
-                <br />
-                -110001
-              </p>
-            </div>
-          </div>
         </div>
       </div>
     </div>

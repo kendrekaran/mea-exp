@@ -14,7 +14,7 @@ export default function AboutApostille() {
 
                     <div className="relative w-full h-[400px] md:h-[400px] rounded-lg overflow-hidden">
                         <Image
-                            src="/about1.svg"
+                            src="https://i.pinimg.com/474x/52/af/be/52afbe09cbdcda34aa23d616b9a032db.jpg"
                             alt="Apostille attestation document example"
                             fill
                             className="object-cover"

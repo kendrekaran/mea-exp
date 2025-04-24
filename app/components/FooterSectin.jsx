@@ -97,7 +97,7 @@ export default function FooterSection() {
                       d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                     />
                   </svg>
-                  <p className="text-gray-300 text-sm md:text-base">contact@meaexpert.com</p>
+                  <p className="text-gray-300 text-sm md:text-base">info@meaexpert.com</p>
                 </div>
                 <div className="flex items-center">
                   <svg

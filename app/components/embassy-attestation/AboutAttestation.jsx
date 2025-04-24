@@ -32,7 +32,7 @@ export default function AboutAttestation() {
           
           <div className="order-1 md:order-2 relative w-full h-[350px] md:h-[450px] rounded-xl overflow-hidden shadow-lg">
             <Image
-          src="/about1.svg"
+          src="https://i.pinimg.com/736x/83/6d/d3/836dd3b9965ef275822164a77e183b65.jpg"
           alt="Embassy requirements illustration"
           fill
           className="object-cover"

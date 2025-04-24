@@ -11,63 +11,56 @@ export default function MEAServices() {
       id: 1,
       title: "MEA Attestation Services",
       description: "Ministry of External Affairs (India) document attestation for all types of documents.",
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ",
+      image: "https://i.pinimg.com/736x/a0/fd/1c/a0fd1c102e40829ec94f8ece5e077343.jpg",
       link: "/mea-attestation"
     },
     {
       id: 2,
       title: "Apostille Services",
       description: "Apostille stamping for documents going to Hague Convention countries.",
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ",
+      image: "https://i.pinimg.com/474x/52/af/be/52afbe09cbdcda34aa23d616b9a032db.jpg",
       link: "/apostille"
     },
     {
       id: 3,
       title: "HRD & Home Department",
       description: "State-level authentication of educational/personal documents (HRD, Home, SDM).",
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ",
+      image: "https://i.pinimg.com/474x/b4/71/fc/b471fc4dbf0e6f24ce7eb4094fbaa0a7.jpg",
       link: "/hrd-home-attestation"
     },
     {
       id: 4,
       title: "Embassy Attestation",
       description: "Legalization from foreign embassies (UAE, Qatar, Kuwait, etc.) post MEA attestation.",
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ",
+      image: "https://i.pinimg.com/736x/83/6d/d3/836dd3b9965ef275822164a77e183b65.jpg",
       link: "/embassy-attestation"
     },
     {
       id: 5,
       title: "Chamber of Commerce",
       description: "Attestation for commercial/corporate documents before MEA or embassy attestation.",
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ",
+      image: "https://i.pinimg.com/736x/30/e6/b1/30e6b115515715e460045adac676d27c.jpg",
       link: "/chamber-commerce"
     },
-    // {
-    //   id: 6,
-    //   title: "Immigration Assistance",
-    //   description: "Get expert help with PR, work permits, and immigration visas including documentation, apostille, and embassy requirements.",
-    //   image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
-    // },
-
     {
       id: 9,
       title: "Translation Services",
       description: "Certified translation of documents into foreign languages (French, German, Arabic, etc.) for visa, immigration, and legal use.",
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ",
+      image: "https://i.pinimg.com/474x/63/75/e6/6375e613497e19b86dd9dc30faba1754.jpg",
       link: "/translation"
     },
     {
       id: 7,
       title: "Visa & Immigration",
       description: "Includes PR, work permits, tourist/student visas, documentation, embassy submissions, and expert guidance",
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ",
+      image: "https://i.pinimg.com/474x/20/ab/28/20ab28154cbdbeabffbc010611a860e8.jpg",
       link: "/visa-immigration"
     },
     {
       id: 8,
       title: "Study Abroad",
       description: "Focused on students: document attestation, apostille, visa help, university application support.",
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ",
+      image: "https://i.pinimg.com/474x/2a/12/20/2a1220bd30d4a7b794c32d917eba439d.jpg",
       link: "/study-abroad"
 
     },
@@ -75,21 +68,9 @@ export default function MEAServices() {
       id: 10,
       title: "Travel Documentation",
       description: "Visa-compliant travel insurance, dummy tickets with verifiable PNR, and verified itineraries for Schengen, US, UK, and more.",
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ",
+      image: "https://i.pinimg.com/474x/91/81/08/918108561824e8aaedb364f4dee2ac59.jpg",
       link: "/travel-documentation"
-    },
-    // {
-    //   id: 11,
-    //   title: "Dummy Flight Tickets",
-    //   description: "Book verifiable dummy flight tickets with PNR for visa purposes without paying full ticket prices.",
-    //   image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
-    // },
-    // {
-    //   id: 12,
-    //   title: "Travel Itinerary Assistance",
-    //   description: "Get verified travel plans and itineraries required for Schengen, US, UK, and other tourist visa applications.",
-    //   image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
-    // }
+    }
   ];
 
   return (
@@ -114,7 +95,8 @@ export default function MEAServices() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service) => (
-            <div 
+            <Link 
+            href={service.link} 
               key={service.id} 
               className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col h-full transform hover:-translate-y-1"
               onMouseEnter={() => setHoveredId(service.id)}
@@ -137,15 +119,14 @@ export default function MEAServices() {
               
               <div className="px-6 pb-6">
                 {service.link ? (
-                  <Link 
-                    href={service.link}
+                  <div
                     className={`group flex items-center text-sm font-medium ${hoveredId === service.id ? 'text-[#0A9DB2]' : 'text-gray-700'} hover:text-[#0A9DB2] transition-colors duration-200`}
                   >
                     <span className="mr-2">Explore Service</span>
                     <span className={`flex items-center justify-center rounded-full p-1 ${hoveredId === service.id ? 'bg-[#0A9DB2] text-white' : 'bg-gray-100 text-gray-500'} group-hover:bg-[#0A9DB2] group-hover:text-white transition-all duration-200 transform ${hoveredId === service.id ? 'translate-x-1' : ''} group-hover:translate-x-1`}>
                       <ArrowRight size={14} />
                     </span>
-                  </Link>
+                  </div>
                 ) : (
                   <button 
                     className={`group flex items-center text-sm font-medium ${hoveredId === service.id ? 'text-[#0A9DB2]' : 'text-gray-700'} hover:text-[#0A9DB2] transition-colors duration-200`}
@@ -157,7 +138,7 @@ export default function MEAServices() {
                   </button>
                 )}
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

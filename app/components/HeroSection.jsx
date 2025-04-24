@@ -61,7 +61,7 @@ export default function HeroSection() {
             <div className="absolute -bottom-2 right-2 rounded-lg bg-white px-2 py-1 sm:px-3 sm:py-2 shadow-lg md:right-4 lg:-right-8">
               <div className="flex items-center space-x-1 sm:space-x-2">
                 <Mail className="h-3 w-3 sm:h-4 sm:w-4 md:h-5 md:w-5 text-[#0A9DB2]" />
-                <span className="text-xs sm:text-sm md:text-base font-medium">contact@meaexpert.com</span>
+                <span className="text-xs sm:text-sm md:text-base font-medium">info@meaexpert.com</span>
               </div>
             </div>
           </div>
