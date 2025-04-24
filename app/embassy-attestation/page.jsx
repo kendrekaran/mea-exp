@@ -10,8 +10,21 @@ import ContactSection from "../components/MEA_Attestation/ContactSection";
 import AboutAttestation from "../components/embassy-attestation/AboutAttestation";
 
 export const metadata = {
-  title: "Embassy Attestation Services | MEA EXPERT",
-  description: "Professional embassy attestation services for UAE, Qatar, Saudi Arabia and other countries. Fast, reliable attestation across India.",
+  title: "Embassy Attestation Services in India | MEA Expert - Trusted & Quick",
+  description: "Professional embassy attestation services for all documents. Fast processing, reliable service for international document verification.",
+  metadataBase: new URL('https://meaexpert.com/'),
+  openGraph: {
+    title: 'Embassy Attestation Services - MEA Expert',
+    description: 'Professional embassy attestation services in India',
+    type: 'website',
+    images: ['/about1.svg'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  keywords: 'embassy attestation, document attestation, embassy verification, international attestation, MEA embassy services',
+  canonical: 'https://meaexpert.com/embassy-attestation',
 };
 
 export default function EmbassyAttestationPage() {

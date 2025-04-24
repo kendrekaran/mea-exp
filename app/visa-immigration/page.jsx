@@ -6,8 +6,21 @@ import WhyChooseUs from "../components/visa-immigration/WhyChooseUs";
 import ContactSection from "../components/MEA_Attestation/ContactSection";
 
 export const metadata = {
-  title: "Visa & Immigration Services | MEA EXPERT",
-  description: "Expert visa and immigration services for PR, work permits, tourist & student visas. Complete support for Canada, USA, UK, Australia, and more.",
+  title: "Visa & Immigration Services | MEA Expert - Expert Guidance",
+  description: "Professional visa and immigration services. Expert assistance for all types of visas, immigration processes, and documentation.",
+  metadataBase: new URL('https://meaexpert.com/'),
+  openGraph: {
+    title: 'Visa & Immigration Services - MEA Expert',
+    description: 'Complete visa and immigration services in India',
+    type: 'website',
+    images: ['/about1.svg'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  keywords: 'visa services, immigration services, work visa, student visa, tourist visa, PR visa, visa consultation',
+  canonical: 'https://meaexpert.com/visa-immigration',
 };
 
 export default function VisaImmigrationPage() {

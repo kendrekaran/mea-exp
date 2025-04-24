@@ -1,5 +1,23 @@
 import { MapPin, Phone, Mail, Clock, Facebook, Instagram, ArrowRight, MessageSquare } from "lucide-react";
 
+export const metadata = {
+  title: "Contact MEA Expert | Professional Document Attestation Services",
+  description: "Get in touch with MEA Expert for all your document attestation needs. Professional assistance for MEA, embassy, HRD attestation and more.",
+  metadataBase: new URL('https://meaexpert.com/'),
+  openGraph: {
+    title: 'Contact MEA Expert',
+    description: 'Contact us for professional document attestation services',
+    type: 'website',
+    images: ['/about1.svg'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  keywords: 'contact MEA Expert, attestation services contact, document attestation help, MEA attestation contact',
+  canonical: 'https://meaexpert.com/contact',
+};
+
 const ContactPage = () => {
   return (
     <div className="bg-gray-50 min-h-screen">

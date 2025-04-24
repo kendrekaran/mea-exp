@@ -7,8 +7,21 @@ import RequirementsSection from "../components/translation/RequirementsSection";
 import ContactSection from "../components/MEA_Attestation/ContactSection";
 
 export const metadata = {
-  title: "Certified Translation Services | MEA EXPERT",
-  description: "Professional document translation services for visa, immigration, and legal use. Certified translations in multiple languages accepted worldwide.",
+  title: "Professional Document Translation Services | MEA Expert",
+  description: "Expert document translation services in multiple languages. Certified translations for legal, academic, and business documents.",
+  metadataBase: new URL('https://meaexpert.com/'),
+  openGraph: {
+    title: 'Document Translation Services - MEA Expert',
+    description: 'Professional document translation services in India',
+    type: 'website',
+    images: ['/about1.svg'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  keywords: 'document translation, certified translation, legal translation, academic translation, business document translation, multi-language translation',
+  canonical: 'https://meaexpert.com/translation',
 };
 
 export default function TranslationPage() {

@@ -5,8 +5,21 @@ import ServiceHeader from "../components/hrd-home-attestation/ServiceHeader";
 import WhyChooseUs from "../components/hrd-home-attestation/WhyChooseUs";
 
 export const metadata = {
-  title: "Apostille Attestation Services | MEA EXPERT",
-  description: "Professional Apostille services for all document types. Fast, reliable and MEA-approved attestation across India.",
+  title: "HRD Attestation Services in India | MEA Expert - Fast & Reliable",
+  description: "Professional HRD/Home Department attestation services. Quick processing for educational documents, reliable verification service.",
+  metadataBase: new URL('https://meaexpert.com/'),
+  openGraph: {
+    title: 'HRD Attestation Services - MEA Expert',
+    description: 'Professional HRD attestation services for educational documents',
+    type: 'website',
+    images: ['/about1.svg'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  keywords: 'HRD attestation, home department attestation, educational document verification, degree attestation, MEA HRD services',
+  canonical: 'https://meaexpert.com/hrd-home-attestation',
 };
 
 export default function ApostillePage() {

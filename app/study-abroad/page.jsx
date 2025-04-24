@@ -5,8 +5,21 @@ import WhyChooseUs from "../components/study-abroad/WhyChooseUs";
 import ContactSection from "../components/MEA_Attestation/ContactSection";
 
 export const metadata = {
-  title: "Study Abroad Services | MEA EXPERT",
-  description: "Complete study abroad consultancy services including document attestation, visa filing, and university admission guidance. Expert support for Canada, USA, UK, Australia & more.",
+  title: "Study Abroad Documentation Services | MEA Expert - Complete Assistance",
+  description: "Complete study abroad documentation services. Expert assistance for visas, attestation, and translations for international students.",
+  metadataBase: new URL('https://meaexpert.com/'),
+  openGraph: {
+    title: 'Study Abroad Services - MEA Expert',
+    description: 'Complete study abroad documentation assistance',
+    type: 'website',
+    images: ['/about1.svg'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  keywords: 'study abroad, student visa, education documents, international education, document attestation, university admission',
+  canonical: 'https://meaexpert.com/study-abroad',
 };
 
 export default function StudyAbroadPage() {

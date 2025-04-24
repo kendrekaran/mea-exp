@@ -9,8 +9,21 @@ import ContactSection from "../components/MEA_Attestation/ContactSection";
 import FAQSection from "../components/MEA_Attestation/FAQSection";
 
 export const metadata = {
-  title: "MEA Attestation Services | MEA EXPERT",
-  description: "Professional MEA Attestation services for all document types. Fast, reliable and government-recognized attestation across India.",
+  title: "MEA Attestation Services in India | MEA Expert - Trusted & Official",
+  description: "Official MEA attestation services for all documents. Fast processing, government-recognized verification for international use.",
+  metadataBase: new URL('https://meaexpert.com/'),
+  openGraph: {
+    title: 'MEA Attestation Services - MEA Expert',
+    description: 'Official MEA document attestation services in India',
+    type: 'website',
+    images: ['/about1.svg'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  keywords: 'MEA attestation, ministry of external affairs, document attestation, international verification, official attestation',
+  canonical: 'https://meaexpert.com/mea-attestation',
 };
 
 export default function ServicesPage() {
@@ -28,4 +41,4 @@ export default function ServicesPage() {
       <ContactSection />
     </div>
   );
-} 
+}
