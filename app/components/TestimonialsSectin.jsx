@@ -18,36 +18,42 @@ export default function TestimonialSection() {
       text: "I was overwhelmed with the visa process, but MEA Expert made it seamless! They guided me at every step, from document preparation to interview coaching. Today, I'm living my dream in Toronto! Highly recommended!",
       name: "Rohan Sharma",
       position: "Canada PR Visa",
+      image: "https://i.pinimg.com/474x/92/12/46/9212466a7a662172657b69e063012c23.jpg"
     },
     {
       id: 2,
       text: "Getting my USA student visa seemed impossible until I found MEA Expert. Their expert team handled everything perfectly. Thanks to them, I'm now studying at a top university in New York!",
       name: "Priya Mehta",
       position: "USA Student Visa",
+      image: "https://i.pinimg.com/474x/36/af/73/36af73ef3cd451d1e60d45899ee15043.jpg"
     },
     {
       id: 3,
       text: "I applied for a UK work visa through MEAExpert and it was the best decision ever! The process was smooth, and they even helped me with job opportunities. Now, I'm working in London!",
       name: "Aman Verma",
       position: "UK Work Visa",
+      image: "https://i.pinimg.com/474x/70/0b/fd/700bfdf5b2bbc8de5f49edce8731b0f6.jpg"
     },
     {
       id: 4,
       text: "I wanted to explore Europe but was confused about the visa process. MEAExpert got my Schengen visa approved in record time! Paris, here I come! 🇫🇷",
       name: "Neha Patel",
       position: "Schengen Tourist Visa",
+      image: "https://i.pinimg.com/474x/0d/0e/0f/0d0e0fe7d73b0ac13702a0c6a67722f1.jpg"
     },
     {
       id: 5,
       text: "Starting a business in Dubai was my dream, but the visa process felt overwhelming. MEAExpert made it stress-free! Their team handled everything efficiently, and now I'm successfully running my business in the UAE.",
       name: "Anjali Desai",
       position: "Dubai Business Visa",
+      image: "https://i.pinimg.com/474x/a8/74/65/a87465275efcdcbb5f9201ad6473c0fa.jpg"
     },
     {
       id: 6,
       text: "From eligibility assessment to final approval, MEAExpert provided exceptional service. I'm now a permanent resident of Australia, and I couldn't be happier!",
       name: "Vikram Singh",
       position: "Australia PR Visa",
+      image: "https://i.pinimg.com/474x/32/3c/9d/323c9d43ec4943c201381e8c2867c638.jpg"
     },
   ];
 
@@ -83,7 +89,7 @@ export default function TestimonialSection() {
                 <div className="w-12 h-12 rounded-full bg-gray-200 overflow-hidden mr-4">
                   <div className="relative w-full h-full">
                     <Image 
-                      src="/placeholder.jpg" 
+                      src={testimonial.image}
                       alt={testimonial.name}
                       layout="fill"
                       objectFit="cover"
