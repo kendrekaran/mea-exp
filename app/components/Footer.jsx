@@ -1,4 +1,5 @@
 import Image from "next/image"
+import { Facebook, Instagram } from 'lucide-react'
 
 export default function FooterSection() {
   return (
@@ -15,6 +16,16 @@ export default function FooterSection() {
                 <br />
                 Solutions
               </p>
+              <div className="flex space-x-4 mt-4">
+                <a href="https://www.facebook.com/people/MEA-Experts/61568621811046/?mibextid=ZbWKwL" 
+                   className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors">
+                  <Facebook className="w-5 h-5" />
+                </a>
+                <a href="https://instagram.com/meaexpert" 
+                   className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors">
+                  <Instagram className="w-5 h-5" />
+                </a>
+              </div>
             </div>
 
             {/* Services Section */}

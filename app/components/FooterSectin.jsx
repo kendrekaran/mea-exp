@@ -1,4 +1,5 @@
 import Image from "next/image"
+import { Facebook, Instagram } from 'lucide-react'
 
 export default function FooterSection() {
   return (
@@ -7,6 +8,7 @@ export default function FooterSection() {
         <div className="container mx-auto max-w-6xl">
           {/* Main content area */}
           <div className="flex flex-col md:flex-row md:justify-between gap-8">
+          
 
             {/* Apostille Documents Section */}
             <div className="mb-6 md:mb-0">
@@ -119,24 +121,36 @@ export default function FooterSection() {
           </div>
 
           {/* Copyright area */}
-          <div className="border-t border-gray-700 mt-6 md:mt-8 pt-6 md:pt-8 flex items-center justify-start">
-            <div className="bg-white rounded-full p-2 mr-3">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-4 w-4 md:h-5 md:w-5 text-[#1a2e3a]"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-                />
-              </svg>
+          <div className="border-t border-gray-700 mt-6 md:mt-8 pt-6 md:pt-8 flex items-center justify-between">
+            <div className="flex items-center">
+              <div className="bg-white rounded-full p-2 mr-3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-4 w-4 md:h-5 md:w-5 text-[#1a2e3a]"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                  />
+                </svg>
+              </div>
+              <p className="text-gray-300 text-sm md:text-base">MEAExpert, All right reserved.</p>
             </div>
-            <p className="text-gray-300 text-sm md:text-base">MEAExpert, All right reserved.</p>
+            <div className="flex space-x-4">
+              <a href="https://www.facebook.com/people/MEA-Experts/61568621811046/?mibextid=ZbWKwL" 
+                className="text-gray-300 hover:text-[#0A9DB2] transition-colors">
+                <Facebook className="w-5 h-5" />
+              </a>
+              <a href="https://instagram.com/meaexpert" 
+                className="text-gray-300 hover:text-[#0A9DB2] transition-colors">
+                <Instagram className="w-5 h-5" />
+              </a>
+            </div>
           </div>
         </div>
       </div>

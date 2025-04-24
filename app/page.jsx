@@ -30,6 +30,9 @@ export default function Home() {
       <section id="features">
         <FeaturesSection />
       </section>
+      <section id="steps">
+        <StepsSection />
+      </section>
       <section id="testimonials">
         <TestimonialSection />
       </section>

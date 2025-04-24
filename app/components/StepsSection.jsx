@@ -1,96 +1,74 @@
 "use client"
-import Image from "next/image";
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import React, { useState } from 'react';
+import { Globe2, BookOpen, FileSearch, Timer, Shield, Barcode, Truck, Headphones, PiggyBank, Mail, ClipboardCheck, FileText, CreditCard, Search, FileCheck } from 'lucide-react';
 
-export default function StepSection() {
-  const { ref, inView } = useInView({
-    threshold: 0.2,
-    triggerOnce: true
-  });
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.3
-      }
-    }
-  };
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut"
-      }
-    }
-  };
+const steps = [
+  {
+    icon: ClipboardCheck,
+    title: "Register for MEA Apostille",
+    description: "Complete the registration process for MEA apostille service"
+  },
+  {
+    icon: FileText,
+    title: "Send the original documents for apostille",
+    description: "Submit your original documents for the apostille process"
+  },
+  {
+    icon: CreditCard,
+    title: "Make the payment online for MEA apostille",
+    description: "Secure online payment for your apostille service"
+  },
+  {
+    icon: Search,
+    title: "Track processing status of MEA apostille",
+    description: "Monitor your document's apostille processing status"
+  },
+  {
+    icon: FileCheck,
+    title: "Once MEA apostille document is returned",
+    description: "Receive your completed apostille document"
+  }
+];
 
-  const steps = [
-    {
-      title: "Submit Documents",
-      description: "Upload your documents and receive a quote instantly",
-      image: "/file.svg"
-    },
-    {
-      title: "Process Documents",
-      description: "Our experts will process your documents with utmost care",
-      image: "/window.svg"
-    },
-    {
-      title: "Get Attested Documents",
-      description: "Receive your attested documents at your doorstep",
-      image: "/globe.svg"
-    }
-  ];
+function StepsSection() {
 
   return (
-    <motion.div 
-      className="bg-gray-50 py-16"
-      ref={ref}
-      initial="hidden"
-      animate={inView ? "visible" : "hidden"}
-      variants={containerVariants}
-    >
-      <div className="container mx-auto px-4">
-        <motion.div 
-          className="text-center mb-12"
-          variants={itemVariants}
-        >
-          <h2 className="text-xl poppins-medium mb-2">How it Works</h2>
-          <h1 className="text-5xl poppins-medium mb-4">
-            <span className="text-black">Process to get your </span>
-            <span className="text-[#0A9DB2]">Documents </span>
-            <span className="text-black">Attested</span>
-          </h1>
-        </motion.div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {steps.map((step, index) => (
-            <motion.div
-              key={index}
-              className="bg-white rounded-lg p-6 text-center shadow-md hover:shadow-lg transition-shadow"
-              variants={itemVariants}
-            >
-              <div className="relative w-24 h-24 mx-auto mb-6">
-                <Image
-                  src={step.image}
-                  alt={step.title}
-                  fill
-                  className="object-contain"
-                />
-              </div>
-              <h3 className="text-xl font-semibold mb-3">{step.title}</h3>
-              <p className="text-gray-600">{step.description}</p>
-            </motion.div>
-          ))}
-        </div>
+    <div className="min-h-screen bg-gray-50">
+  
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          
+        <div className="text-center mb-8 ">
+        <h1 className="text-5xl poppins-medium mb-16">
+          <span className="text-black">Steps to get </span>
+          <span className="text-[#0A9DB2]">MEA Apostille</span>
+        </h1>
       </div>
-    </motion.div>
+
+          <div className="max-w-3xl mx-auto">
+            {steps.map((step, index) => (
+              <div key={index} className="flex items-center mb-4">
+                <div className="w-12 h-12 rounded-full bg-[#0A9DB2] flex items-center justify-center text-white font-bold mr-4">
+                  {String(index + 1).padStart(2, '0')}
+                </div>
+                <div className="flex-1 p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                  <div className="flex items-center space-x-3">
+                    <step.icon className="w-6 h-6 text-[#0A9DB2]" />
+                    <h3 className="text-lg font-semibold">{step.title}</h3>
+                  </div>
+                  <p className="mt-2 text-gray-600 ml-9">{step.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+     
+    </div>
   );
 }
+
+export default StepsSection;
