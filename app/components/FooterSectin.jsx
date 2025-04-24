@@ -7,14 +7,36 @@ export default function FooterSection() {
         <div className="container mx-auto max-w-6xl">
           {/* Main content area */}
           <div className="flex flex-col md:flex-row md:justify-between gap-8">
-            {/* Logo and tagline */}
-            <div className="pt-4 md:pt-8">
-              <h2 className="text-xl md:text-2xl poppins-medium mb-2 md:mb-4">MEA EXPERT</h2>
-              <p className="text-white text-base md:text-lg">
-                Overseas Attestation
-                <br />
-                Solutions
-              </p>
+
+            {/* Apostille Documents Section */}
+            <div className="mb-6 md:mb-0">
+              <h3 className="text-lg md:text-xl font-bold mb-2 md:mb-4">Apostille Documents</h3>
+              <ul className="text-gray-300 text-sm md:text-base space-y-2">
+                <li><a href="/apostille/degree" className="hover:text-white">Degree Certificate Apostille</a></li>
+                <li><a href="/apostille/birth" className="hover:text-white">Birth Certificate Apostille</a></li>
+                <li><a href="/apostille/marriage" className="hover:text-white">Marriage Certificate Apostille</a></li>
+                <li><a href="/apostille/police-clearance" className="hover:text-white">Police Clearance Certificate</a></li>
+                <li><a href="/apostille/single" className="hover:text-white">Single Certificate Apostille</a></li>
+                <li><a href="/apostille/gst" className="hover:text-white">GST Certificate Apostille</a></li>
+                <li><a href="/apostille/power-attorney" className="hover:text-white">Power Attorney Apostille</a></li>
+                <li><a href="/apostille/driving-license" className="hover:text-white">Driving License Apostille</a></li>
+              </ul>
+            </div>
+
+            {/* Services Section */}
+            <div className="mb-6 md:mb-0">
+              <h3 className="text-lg md:text-xl font-bold mb-2 md:mb-4">Our Services</h3>
+              <ul className="text-gray-300 text-sm md:text-base space-y-2">
+                <li><a href="/mea-attestation" className="hover:text-white">MEA Attestation Services</a></li>
+                <li><a href="/apostille" className="hover:text-white">Apostille Services</a></li>
+                <li><a href="/hrd-home-attestation" className="hover:text-white">HRD & Home Department Attestation</a></li>
+                <li><a href="/embassy-attestation" className="hover:text-white">Embassy Attestation</a></li>
+                <li><a href="/chamber-commerce" className="hover:text-white">Chamber of Commerce Attestation</a></li>
+                <li><a href="/translation" className="hover:text-white">Translation Services</a></li>
+                <li><a href="/visa-immigration" className="hover:text-white">Visa & Immigration Assistance</a></li>
+                <li><a href="/study-abroad" className="hover:text-white">Study Abroad Support</a></li>
+                <li><a href="/travel-documentation" className="hover:text-white">Travel Documentation Services</a></li>
+              </ul>
             </div>
 
             {/* Office hours and contact info */}

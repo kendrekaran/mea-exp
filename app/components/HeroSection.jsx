@@ -43,7 +43,7 @@ export default function HeroSection() {
           <div className="relative mt-6 md:mt-0">
             <div className="relative overflow-hidden rounded-2xl">
               <Image
-                src="/hero.svg"
+                src="/hero.webp"
                 alt="Passport and travel documents"
                 width={600}
                 height={600}

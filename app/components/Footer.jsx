@@ -17,6 +17,22 @@ export default function FooterSection() {
               </p>
             </div>
 
+            {/* Services Section */}
+            <div className="mb-6 md:mb-0">
+              <h3 className="text-lg md:text-xl font-bold mb-2 md:mb-4">Our Services</h3>
+              <ul className="text-gray-300 text-sm md:text-base space-y-2">
+                <li><a href="/mea-attestation" className="hover:text-white">MEA Attestation Services</a></li>
+                <li><a href="/apostille" className="hover:text-white">Apostille Services</a></li>
+                <li><a href="/hrd-home-attestation" className="hover:text-white">HRD & Home Department Attestation</a></li>
+                <li><a href="/embassy-attestation" className="hover:text-white">Embassy Attestation</a></li>
+                <li><a href="/chamber-commerce" className="hover:text-white">Chamber of Commerce Attestation</a></li>
+                <li><a href="/translation" className="hover:text-white">Translation Services</a></li>
+                <li><a href="/visa-immigration" className="hover:text-white">Visa & Immigration Assistance</a></li>
+                <li><a href="/study-abroad" className="hover:text-white">Study Abroad Support</a></li>
+                <li><a href="/travel-documentation" className="hover:text-white">Travel Documentation Services</a></li>
+              </ul>
+            </div>
+
             {/* Office hours and contact info */}
             <div className="flex flex-col md:flex-row gap-8 md:gap-24">
               {/* Office hours */}

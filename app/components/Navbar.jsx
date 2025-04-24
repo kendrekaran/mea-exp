@@ -62,16 +62,72 @@ const services = [
   }
 ];
 
+const documents = [
+  {
+    id: 1,
+    title: 'Degree Certificate Apostille',
+    description: 'Apostille services for educational degree certificates',
+    link: '/apostille/degree'
+  },
+  {
+    id: 2,
+    title: 'Birth Certificate Apostille',
+    description: 'Apostille services for birth certificates',
+    link: '/apostille/birth'
+  },
+  {
+    id: 3,
+    title: 'Marriage Certificate Apostille',
+    description: 'Apostille services for marriage certificates',
+    link: '/apostille/marriage'
+  },
+  {
+    id: 4,
+    title: 'Police Clearance Certificate',
+    description: 'Apostille services for police clearance certificates',
+    link: '/apostille/police-clearance'
+  },
+  {
+    id: 5,
+    title: 'Single Certificate Apostille',
+    description: 'Apostille services for single status certificates',
+    link: '/apostille/single'
+  },
+  {
+    id: 6,
+    title: 'GST Certificate Apostille',
+    description: 'Apostille services for GST certificates',
+    link: '/apostille/gst'
+  },
+  {
+    id: 7,
+    title: 'Power Attorney Apostille',
+    description: 'Apostille services for power of attorney documents',
+    link: '/apostille/power-attorney'
+  },
+  {
+    id: 8,
+    title: 'Driving License Apostille',
+    description: 'Apostille services for driving licenses',
+    link: '/apostille/driving-license'
+  }
+];
+
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const dropdownRef = useRef(null);
+  const [isDocumentsOpen, setIsDocumentsOpen] = useState(false);
+  const servicesDropdownRef = useRef(null);
+  const documentsDropdownRef = useRef(null);
 
-  // Close dropdown when clicking outside
+  // Close dropdowns when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+      if (servicesDropdownRef.current && !servicesDropdownRef.current.contains(event.target)) {
         setIsServicesOpen(false);
+      }
+      if (documentsDropdownRef.current && !documentsDropdownRef.current.contains(event.target)) {
+        setIsDocumentsOpen(false);
       }
     };
 
@@ -110,19 +166,19 @@ const Navbar = () => {
         </div>
 
         <nav className={`${isMenuOpen ? "flex" : "hidden"} w-full flex-col items-center space-y-4 md:flex md:w-auto md:flex-row md:space-x-4 lg:space-x-8 md:space-y-0`}>
-          <Link href="/" className="text-base font-medium text-gray-700 transition-colors hover:text-[#0A9DB2]">
+          <Link href="/" className="text-lg font-medium text-gray-700 transition-colors hover:text-[#0A9DB2]">
             Home
           </Link>
           
           {/* Services Dropdown */}
-          <div className="relative" ref={dropdownRef}>
+          <div className="relative" ref={servicesDropdownRef}>
             <button
               onClick={() => setIsServicesOpen(!isServicesOpen)}
-              className="text-base flex font-medium text-gray-700 transition-colors hover:text-[#0A9DB2]"
+              className="text-lg flex font-medium text-gray-700 transition-colors hover:text-[#0A9DB2]"
             >
               Services
               <ChevronDown 
-                className={`ml-1 mt-1 h-4 w-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} 
+                className={`ml-1 mt-1.5 h-4 w-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} 
               />
             </button>
 
@@ -146,11 +202,43 @@ const Navbar = () => {
             )}
           </div>
 
-          <Link href="/documents" className="text-base font-medium text-gray-700 transition-colors hover:text-[#0A9DB2]">
-            Documents
+          {/* Documents Dropdown */}
+          <div className="relative" ref={documentsDropdownRef}>
+            <button
+              onClick={() => setIsDocumentsOpen(!isDocumentsOpen)}
+              className="text-lg flex font-medium text-gray-700 transition-colors hover:text-[#0A9DB2]"
+            >
+              Documents
+              <ChevronDown 
+                className={`ml-1 mt-1.5 h-4 w-4 transition-transform ${isDocumentsOpen ? 'rotate-180' : ''}`} 
+              />
+            </button>
+
+            {isDocumentsOpen && (
+              <div className="absolute left-0 mt-2 w-screen max-w-md bg-white rounded-lg shadow-lg z-50">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4">
+                  {documents.map((document) => (
+                    <a
+                      key={document.id}
+                      href={document.link}
+                      className="flex flex-col p-3 rounded-lg hover:bg-gray-50 transition-colors"
+                    >
+                      <div className="font-medium text-gray-900">{document.title}</div>
+                      <p className="text-xs text-gray-500 mt-1 line-clamp-2">
+                        {document.description}
+                      </p>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+
+          <Link href="#country" className="text-lg font-medium text-gray-700 transition-colors hover:text-[#0A9DB2]">
+            Countries
           </Link>
           
-          <Link href="/study-abroad" className="text-base font-medium text-gray-700 transition-colors hover:text-[#0A9DB2]">
+          <Link href="/study-abroad" className="text-lg font-medium text-gray-700 transition-colors hover:text-[#0A9DB2]">
             Abroad Study
           </Link>
         </nav>

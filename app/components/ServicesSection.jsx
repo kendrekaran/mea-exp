@@ -10,35 +10,35 @@ export default function MEAServices() {
     {
       id: 1,
       title: "MEA Attestation Services",
-      description: "Get your documents authenticated by the Ministry of External Affairs (MEA) for international use with fast and genuine processing.",
+      description: "Ministry of External Affairs (India) document attestation for all types of documents.",
       image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ",
       link: "/mea-attestation"
     },
     {
       id: 2,
       title: "Apostille Services",
-      description: "Legalize your documents for Hague Convention countries with fast and reliable apostille services from MEA Expert.",
+      description: "Apostille stamping for documents going to Hague Convention countries.",
       image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ",
       link: "/apostille"
     },
     {
       id: 3,
       title: "HRD & Home Department",
-      description: "Get your academic certificates authenticated by HRD and State Home Departments before MEA or embassy attestation.",
+      description: "State-level authentication of educational/personal documents (HRD, Home, SDM).",
       image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ",
       link: "/hrd-home-attestation"
     },
     {
       id: 4,
       title: "Embassy Attestation",
-      description: "Legalize your documents with embassy attestation for Europe, Gulf countries, and more.",
+      description: "Legalization from foreign embassies (UAE, Qatar, Kuwait, etc.) post MEA attestation.",
       image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ",
       link: "/embassy-attestation"
     },
     {
       id: 5,
       title: "Chamber of Commerce",
-      description: "Authenticate commercial documents like invoices, MOUs, and certificates with certified Chamber of Commerce attestation.",
+      description: "Attestation for commercial/corporate documents before MEA or embassy attestation.",
       image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ",
       link: "/chamber-commerce"
     },
@@ -52,29 +52,29 @@ export default function MEAServices() {
     {
       id: 9,
       title: "Translation Services",
-      description: "Professional translation of documents into foreign languages for visa, immigration, and legal compliance purposes.",
+      description: "Certified translation of documents into foreign languages (French, German, Arabic, etc.) for visa, immigration, and legal use.",
       image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ",
       link: "/translation"
     },
     {
       id: 7,
-      title: "Visa assistance service",
-      description: "Expert visa filing, documentation, and embassy guidance for countries like Canada, UK, USA, UAE, Australia, and more.",
+      title: "Visa & Immigration",
+      description: "Includes PR, work permits, tourist/student visas, documentation, embassy submissions, and expert guidance",
       image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ",
       link: "/visa-immigration"
     },
     {
       id: 8,
-      title: "Study Abroad Assistance",
-      description: "Get end-to-end support for overseas education including document attestation, apostille, visa filing, and university assistance.",
+      title: "Study Abroad",
+      description: "Focused on students: document attestation, apostille, visa help, university application support.",
       image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ",
       link: "/study-abroad"
 
     },
     {
       id: 10,
-      title: "Travel Insurance",
-      description: "Secure your travel with visa-compliant insurance policies tailored for students, tourists, and business travelers.",
+      title: "Travel Documentation",
+      description: "Visa-compliant travel insurance, dummy tickets with verifiable PNR, and verified itineraries for Schengen, US, UK, and more.",
       image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ",
       link: "/travel-documentation"
     },

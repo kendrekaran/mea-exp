@@ -44,7 +44,7 @@ function CountrySection() {
   };
 
   return (
-    <div className="min-h-screen">
+    <div id='country' className="min-h-screen">
       {/* Main Content */}
       <div className="text-center mb-8 mt-16">
           
