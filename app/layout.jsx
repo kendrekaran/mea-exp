@@ -1,6 +1,8 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "./components/SmoothScroll";
+import Breadcrumbs from "./components/Breadcrumbs";
+import WhatsAppButton from "./components/WhatsAppButton";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -144,7 +146,9 @@ export default function RootLayout({ children }) {
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <SmoothScroll>
+          <Breadcrumbs />
           {children}
+          <WhatsAppButton />
         </SmoothScroll>
       </body>
     </html>
