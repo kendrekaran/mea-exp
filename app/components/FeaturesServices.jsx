@@ -1,9 +1,7 @@
 "use client"
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BookOpen, FileSearch, Timer, Shield, Barcode, Truck, Headphones, PiggyBank, Mail, } from 'lucide-react';
-
-// Group countries by continent/region for better organization
-
+import Head from 'next/head';
 
 const features = [
   {
@@ -55,32 +53,70 @@ const features = [
 
 
 function FeaturesSection() {
+  // Add structured data for SEO
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "MEA Document Services Features",
+    "provider": {
+      "@type": "Organization",
+      "name": "MEA Document Services"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "itemListElement": features.map((feature) => ({
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": feature.title,
+          "description": feature.description
+        }
+      }))
+    }
+  };
+
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify(jsonLd);
+    document.head.appendChild(script);
+
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, []);
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <main className="min-h-screen py-12 md:py-24" role="main">
+      <Head>
+        <title>MEA Document Services Features - Safe, Fast, and Reliable Document Processing</title>
+        <meta name="description" content="Experience trusted document services with online booking, tracking, fast delivery, and guaranteed safety. Best rates for MEA Apostille services in India." />
+        <meta name="keywords" content="MEA apostille, document tracking, document safety, apostille service, document delivery, India" />
+      </Head>
 
-      
-      <section className="py-16 bg-white">
+      <section className="py-16" aria-label="Service Features">
         <div className="container mx-auto px-4">
+          <header className="text-center mb-8">
+            <h2 className="text-xl poppins-medium mb-2">Safe. Fast. Reliable</h2>
+            <h1 className="text-5xl poppins-medium mb-4">
+              <span className="text-black">Why people Trust Us</span>
+            </h1>
+            <h1 className="text-5xl poppins-medium mb-6">
+              <span className="text-black">for their</span>
+              <span className="text-[#0A9DB2]"> Documents</span>
+            </h1>
+          </header>
           
-        <div className="text-center mb-8">
-          
-          <h2 className="text-xl poppins-medium mb-2">Safe. Fast. Reliable</h2>
-        <h1 className="text-5xl poppins-medium mb-4">
-          <span className="text-black">Why people Trust Us</span>
-        </h1>
-        <h1 className="text-5xl poppins-medium mb-6">
-        <span className="text-black">for their</span>
-        <span className="text-[#0A9DB2]"> Documents</span>
-        </h1>
-      </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:py-8 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:py-8 gap-8" role="list">
             {features.map((feature, index) => (
-              <div key={index} className="p-6 bg-white rounded-xl border border-gray-100 shadow-md hover:shadow-lg transition-shadow">
+              <article 
+                key={index} 
+                className="p-6 bg-white rounded-xl border border-gray-100 shadow-md hover:shadow-lg transition-shadow"
+                role="listitem"
+              >
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0">
-                    <div className="w-12 h-12 rounded-full bg-[#0A9DB2]/10  flex items-center justify-center">
+                    <div className="w-12 h-12 rounded-full bg-[#0A9DB2]/10 flex items-center justify-center" aria-hidden="true">
                       <feature.icon className="w-6 h-6 text-[#0A9DB2]" />
                     </div>
                   </div>
@@ -89,13 +125,12 @@ function FeaturesSection() {
                     <p className="text-gray-600">{feature.description}</p>
                   </div>
                 </div>
-              </div>
+              </article>
             ))}
           </div>
         </div>
       </section>
-
-    </div>
+    </main>
   );
 }
 

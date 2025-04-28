@@ -3,6 +3,7 @@ import AttestationComparison from "../components/hrd-home-attestation/Attestatio
 import ProcessSteps from "../components/hrd-home-attestation/ProcessSteps";
 import ServiceHeader from "../components/hrd-home-attestation/ServiceHeader";
 import WhyChooseUs from "../components/hrd-home-attestation/WhyChooseUs";
+import ScrollToTop from "../components/ScrollToTop";
 
 export const metadata = {
   title: "HRD Attestation Services in India | MEA Expert - Fast & Reliable",
@@ -25,6 +26,7 @@ export const metadata = {
 export default function ApostillePage() {
   return (
     <div className="min-h-screen bg-gray-50">
+      <ScrollToTop />
       <ServiceHeader />
       <AboutAttestation />
       <ProcessSteps />

@@ -1,27 +1,67 @@
+"use client"
 import Image from "next/image"
 import { Facebook, Instagram } from 'lucide-react'
+import { useEffect } from 'react'
+import Head from 'next/head'
 
 export default function FooterSection() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "MEA Expert",
+    "url": "https://meaexpert.com",
+    "logo": "https://meaexpert.com/logo.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+ 91 7878868595",
+      "contactType": "customer service",
+      "email": "info@meaexpert.com",
+      "areaServed": "IN",
+      "availableLanguage": ["English", "Hindi"]
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "MB-03, A-Block Naurang House K.G. Marg",
+      "addressLocality": "Connaught Place",
+      "addressRegion": "New Delhi",
+      "postalCode": "110001",
+      "addressCountry": "IN"
+    },
+    "sameAs": [
+      "https://www.facebook.com/people/MEA-Experts/61568621811046",
+      "https://instagram.com/meaexpert"
+    ]
+  };
+
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify(jsonLd);
+    document.head.appendChild(script);
+    return () => document.head.removeChild(script);
+  }, []);
+
   return (
-    <div className="overflow-x-hidden">
+    <footer className="overflow-x-hidden" role="contentinfo">
+      <Head>
+        <meta name="description" content="Contact MEA Expert for document attestation, apostille services, and visa assistance. Find our office hours, location, and connect with us on social media." />
+      </Head>
+
       <div className="bg-[#182631] text-white py-8 md:py-12 mt-12 md:mt-16 px-4">
         <div className="container mx-auto max-w-6xl">
-          {/* Main content area */}
-          <div className="flex flex-col md:flex-row md:justify-between gap-8">
-          
-
+          <nav className="flex flex-col md:flex-row md:justify-between gap-8">
             {/* Apostille Documents Section */}
             <div className="mb-6 md:mb-0">
-              <h3 className="text-lg md:text-xl font-bold mb-2 md:mb-4">Apostille Documents</h3>
-              <ul className="text-gray-300 text-sm md:text-base space-y-2">
-                <li><a href="/apostille/degree" className="hover:text-white">Degree Certificate Apostille</a></li>
-                <li><a href="/apostille/birth" className="hover:text-white">Birth Certificate Apostille</a></li>
-                <li><a href="/apostille/marriage" className="hover:text-white">Marriage Certificate Apostille</a></li>
-                <li><a href="/apostille/police-clearance" className="hover:text-white">Police Clearance Certificate</a></li>
-                <li><a href="/apostille/single" className="hover:text-white">Single Certificate Apostille</a></li>
-                <li><a href="/apostille/gst" className="hover:text-white">GST Certificate Apostille</a></li>
-                <li><a href="/apostille/power-attorney" className="hover:text-white">Power Attorney Apostille</a></li>
-                <li><a href="/apostille/driving-license" className="hover:text-white">Driving License Apostille</a></li>
+              <h2 className="text-lg md:text-xl font-bold mb-2 md:mb-4">Apostille Documents</h2>
+              <ul className="text-gray-300 text-sm md:text-base space-y-2" role="menu">
+                <li role="menuitem"><a href="/apostille/degree" className="hover:text-white" aria-label="Get Degree Certificate Apostille Service">Degree Certificate Apostille</a></li>
+                <li role="menuitem"><a href="/apostille/birth" className="hover:text-white" aria-label="Get Birth Certificate Apostille Service">Birth Certificate Apostille</a></li>
+                <li role="menuitem"><a href="/apostille/marriage" className="hover:text-white" aria-label="Get Marriage Certificate Apostille Service">Marriage Certificate Apostille</a></li>
+                <li role="menuitem"><a href="/apostille/police-clearance" className="hover:text-white" aria-label="Get Police Clearance Certificate Apostille Service">Police Clearance Certificate</a></li>
+                <li role="menuitem"><a href="/apostille/single" className="hover:text-white" aria-label="Get Single Certificate Apostille Service">Single Certificate Apostille</a></li>
+                <li role="menuitem"><a href="/apostille/gst" className="hover:text-white" aria-label="Get GST Certificate Apostille Service">GST Certificate Apostille</a></li>
+                <li role="menuitem"><a href="/apostille/power-attorney" className="hover:text-white" aria-label="Get Power Attorney Apostille Service">Power Attorney Apostille</a></li>
+                <li role="menuitem"><a href="/apostille/driving-license" className="hover:text-white" aria-label="Get Driving License Apostille Service">Driving License Apostille</a></li>
               </ul>
             </div>
 
@@ -44,10 +84,13 @@ export default function FooterSection() {
             {/* Office hours and contact info */}
             <div className="flex flex-col md:flex-row gap-8 md:gap-24">
               {/* Office hours */}
-              <div className="mb-6 md:mb-0">
-                <h3 className="text-lg md:text-xl font-bold mb-2 md:mb-4">Office Hours</h3>
-                <p className="text-gray-300 mb-1 md:mb-2">Mon - Sat:</p>
-                <p className="text-gray-300">10.00 am to 07.00 pm</p>
+              <div className="mb-6 md:mb-0" itemScope itemType="https://schema.org/LocalBusiness">
+                <h2 className="text-lg md:text-xl font-bold mb-2 md:mb-4">Office Hours</h2>
+                <meta itemProp="name" content="MEA Expert" />
+                <time itemProp="openingHours" content="Mo-Sa 10:00-19:00">
+                  <p className="text-gray-300 mb-1 md:mb-2">Mon - Sat:</p>
+                  <p className="text-gray-300">10.00 am to 07.00 pm</p>
+                </time>
               </div>
 
               {/* Contact info */}
@@ -135,9 +178,9 @@ export default function FooterSection() {
                 </div>
               </div>
             </div>
-          </div>
+          </nav>
 
-          {/* Copyright area */}
+          {/* Copyright and Social Links */}
           <div className="border-t border-gray-700 mt-6 md:mt-8 pt-6 md:pt-8 flex items-center justify-between">
             <div className="flex items-center">
               <div className="bg-white rounded-full p-2 mr-3">
@@ -171,6 +214,6 @@ export default function FooterSection() {
           </div>
         </div>
       </div>
-    </div>
-  )
+    </footer>
+  );
 }

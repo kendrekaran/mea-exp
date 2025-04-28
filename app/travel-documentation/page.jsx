@@ -1,3 +1,4 @@
+import RootLayout from "../components/RootLayout";
 import ServiceHeader from "../components/travel-documentation/ServiceHeader";
 import TravelInsurance from "../components/travel-documentation/TravelInsurance";
 import DummyTickets from "../components/travel-documentation/DummyTickets";
@@ -25,13 +26,13 @@ export const metadata = {
 
 export default function TravelDocumentationPage() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <RootLayout>
       <ServiceHeader />
       <TravelInsurance />
       <DummyTickets />
       <TravelItinerary />
       <WhyChooseUs />
       <ContactSection />
-    </div>
+    </RootLayout>
   );
 }

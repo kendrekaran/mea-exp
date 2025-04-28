@@ -67,23 +67,6 @@ export default function WhyChooseUs() {
           ))}
         </div>
 
-        <div className="mt-12 bg-gradient-to-r from-cyan-50 to-cyan-100 p-6 rounded-lg border border-cyan-200">
-          <div className="flex flex-col md:flex-row items-center justify-between">
-            <div className="mb-4 md:mb-0">
-              <h4 className="text-xl font-bold text-gray-800 mb-2">
-                Ready to Get Your Documents Attested?
-              </h4>
-              <p className="text-gray-600">
-                Contact us now for a free consultation and quote
-              </p>
-            </div>
-            <Link href="/contact">
-            <button className="bg-[#0A9DB2] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#098699] transition">
-              Contact Us
-            </button>
-            </Link>
-          </div>
-        </div>
       </div>
     </section>
   );

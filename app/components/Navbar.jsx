@@ -4,6 +4,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ChevronDown } from 'lucide-react';
+import Head from 'next/head';
 
 const services = [
   {
@@ -56,7 +57,7 @@ const services = [
   },
   {
     id: 9,
-    title: 'Travel Insurance',
+    title: 'Travel Documentation',
     description: 'Comprehensive travel insurance coverage for your peace of mind',
     link: '/travel-documentation'
   }
@@ -120,140 +121,174 @@ const Navbar = () => {
   const servicesDropdownRef = useRef(null);
   const documentsDropdownRef = useRef(null);
 
-  // Close dropdowns when clicking outside
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (servicesDropdownRef.current && !servicesDropdownRef.current.contains(event.target)) {
-        setIsServicesOpen(false);
-      }
-      if (documentsDropdownRef.current && !documentsDropdownRef.current.contains(event.target)) {
-        setIsDocumentsOpen(false);
-      }
-    };
+  // Add structured data
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "SiteNavigationElement",
+    "name": "MEA Expert Navigation",
+    "hasPart": [
+      ...services.map(service => ({
+        "@type": "SiteNavigationElement",
+        "name": service.title,
+        "description": service.description,
+        "url": `https://meaexpert.com${service.link}`
+      })),
+      ...documents.map(doc => ({
+        "@type": "SiteNavigationElement",
+        "name": doc.title,
+        "description": doc.description,
+        "url": `https://meaexpert.com${doc.link}`
+      }))
+    ]
+  };
 
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify(jsonLd);
+    document.head.appendChild(script);
+    return () => document.head.removeChild(script);
   }, []);
 
   return (
-    <header className="border-b border-gray-100 bg-[#f9f9f9] sticky top-0 z-50">
-      <div className="container mx-auto flex flex-col items-center justify-between px-4 py-3 md:flex-row md:py-4">
-        <div className="flex w-full items-center justify-between md:w-auto">
-          <Link href="/" className="flex items-center">
-            <Image
-              src="/logo-nav.webp"
-              alt="Mea Expert Logo"
-              width={140}
-              height={80}
-              className="h-10 w-auto md:h-12 lg:h-16"
-              priority
-            />
-          </Link>
+    <>
+      <Head>
+        <meta name="description" content="MEA Expert - Your trusted partner for document attestation, apostille services, and visa assistance in India. Explore our comprehensive services and solutions." />
+      </Head>
 
-          <button
-            className="block rounded p-2 text-gray-700 md:hidden"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
+      <header className="fixed w-full top-0 left-0 right-0 border-b border-gray-100 bg-[#f9f9f9] z-50 shadow-sm">
+        <div className="container mx-auto flex flex-col items-center justify-between px-4 py-3 md:flex-row md:py-4">
+          <div className="flex w-full items-center justify-between md:w-auto">
+            <Link href="/" className="flex items-center" aria-label="MEA Expert Home">
+              <Image
+                src="/logo-nav.webp"
+                alt="MEA Expert - Document Attestation Services"
+                width={140}
+                height={80}
+                className="h-10 w-auto md:h-12 lg:h-16"
+                priority
               />
-            </svg>
-          </button>
-        </div>
+            </Link>
 
-        <nav className={`${isMenuOpen ? "flex" : "hidden"} w-full flex-col items-center space-y-4 md:flex md:w-auto md:flex-row md:space-x-4 lg:space-x-8 md:space-y-0`}>
-          <Link href="/" className="text-lg font-semibold text-gray-700 transition-colors hover:text-[#0A9DB2]">
-            Home
-          </Link>
-          
-          {/* Services Dropdown */}
-          <div className="relative" ref={servicesDropdownRef}>
             <button
-              onClick={() => setIsServicesOpen(!isServicesOpen)}
-              className="text-lg flex font-semibold text-gray-700  transition-colors hover:text-[#0A9DB2]"
+              className="block rounded p-2 text-gray-700 md:hidden"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label="Toggle navigation menu"
+              aria-expanded={isMenuOpen}
             >
-              Services
-              <ChevronDown 
-                className={`ml-1 mt-1.5 h-4 w-4 transition-transform ${isServicesOpen ? 'rotate-180 font-semibold' : ''}`} 
-              />
+              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
+                />
+              </svg>
             </button>
-
-            {isServicesOpen && (
-              <div className="absolute left-0 mt-2 w-screen max-w-md bg-white rounded-lg shadow-lg z-50">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4">
-                  {services.map((service) => (
-                    <a
-                      key={service.id}
-                      href={service.link}
-                      className="flex flex-col p-3 rounded-lg hover:bg-gray-50 transition-colors"
-                    >
-                      <div className="font-medium text-gray-900">{service.title}</div>
-                      <p className="text-xs text-gray-500 mt-1 line-clamp-2">
-                        {service.description}
-                      </p>
-                    </a>
-                  ))}
-                </div>
-              </div>
-            )}
           </div>
 
-          {/* Documents Dropdown */}
-          <div className="relative" ref={documentsDropdownRef}>
-            <button
-              onClick={() => setIsDocumentsOpen(!isDocumentsOpen)}
-              className="text-lg flex font-semibold text-gray-700 transition-colors hover:text-[#0A9DB2]"
-            >
-              Documents
-              <ChevronDown 
-                className={`ml-1 font-semibold mt-1.5 h-4 w-4 transition-transform ${isDocumentsOpen ? 'rotate-180' : ''}`} 
-              />
-            </button>
-
-            {isDocumentsOpen && (
-              <div className="absolute left-0 mt-2 w-screen max-w-md bg-white rounded-lg shadow-lg z-50">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4">
-                  {documents.map((document) => (
-                    <a
-                      key={document.id}
-                      href={document.link}
-                      className="flex flex-col p-3 rounded-lg hover:bg-gray-50 transition-colors"
-                    >
-                      <div className="font-medium text-gray-900">{document.title}</div>
-                      <p className="text-xs text-gray-500 mt-1 line-clamp-2">
-                        {document.description}
-                      </p>
-                    </a>
-                  ))}
-                </div>
-              </div>
-            )}
-          </div>
-
-          <Link href="#country" className="text-lg  text-gray-700 transition-colors hover:text-[#0A9DB2] font-semibold">
-            Countries
-          </Link>
-          
-          <Link href="/study-abroad" className="text-lg font-semibold text-gray-700 transition-colors hover:text-[#0A9DB2]">
-            Abroad Study
-          </Link>
-        </nav>
-
-        <div className={`${isMenuOpen ? "flex" : "hidden"} mt-5 w-full justify-center md:mt-0 md:flex md:w-auto`}>
-          <Link
-            href="/contact"
-            className="rounded-md bg-[#0A9DB2] px-8 py-3 text-lg font-semibold text-white transition-all hover:bg-[#0A9DB2] hover:shadow-lg w-full md:w-auto text-center"
+          <nav 
+            className={`${isMenuOpen ? "flex" : "hidden"} w-full flex-col items-center space-y-4 md:flex md:w-auto md:flex-row md:space-x-4 lg:space-x-8 md:space-y-0`}
+            role="navigation"
+            aria-label="Main navigation"
           >
-            Contact us
-          </Link>
+            <Link href="/" className="text-lg font-semibold text-gray-700 transition-colors hover:text-[#0A9DB2]">
+              Home
+            </Link>
+            
+            {/* Services Dropdown */}
+            <div className="relative" ref={servicesDropdownRef}>
+              <button
+                onClick={() => setIsServicesOpen(!isServicesOpen)}
+                className="text-lg flex font-semibold text-gray-700 transition-colors hover:text-[#0A9DB2]"
+                aria-expanded={isServicesOpen}
+                aria-controls="services-dropdown"
+              >
+                Services
+                <ChevronDown className={`ml-1 mt-1.5 h-4 w-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} aria-hidden="true" />
+              </button>
+
+              {isServicesOpen && (
+                <div id="services-dropdown" className="absolute left-0 mt-2 w-screen max-w-md bg-white rounded-lg shadow-lg z-50" role="menu">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4">
+                    {services.map((service) => (
+                      <a
+                        key={service.id}
+                        href={service.link}
+                        className="flex flex-col p-3 rounded-lg hover:bg-gray-50 transition-colors"
+                        role="menuitem"
+                        aria-label={service.description}
+                      >
+                        <div className="font-medium text-gray-900">{service.title}</div>
+                        <p className="text-xs text-gray-500 mt-1 line-clamp-2">
+                          {service.description}
+                        </p>
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* Documents Dropdown */}
+            <div className="relative" ref={documentsDropdownRef}>
+              <button
+                onClick={() => setIsDocumentsOpen(!isDocumentsOpen)}
+                className="text-lg flex font-semibold text-gray-700 transition-colors hover:text-[#0A9DB2]"
+                aria-expanded={isDocumentsOpen}
+                aria-controls="documents-dropdown"
+              >
+                Documents
+                <ChevronDown 
+                  className={`ml-1 font-semibold mt-1.5 h-4 w-4 transition-transform ${isDocumentsOpen ? 'rotate-180' : ''}`} 
+                  aria-hidden="true" 
+                />
+              </button>
+
+              {isDocumentsOpen && (
+                <div id="documents-dropdown" className="absolute left-0 mt-2 w-screen max-w-md bg-white rounded-lg shadow-lg z-50" role="menu">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4">
+                    {documents.map((document) => (
+                      <a
+                        key={document.id}
+                        href={document.link}
+                        className="flex flex-col p-3 rounded-lg hover:bg-gray-50 transition-colors"
+                        role="menuitem"
+                        aria-label={document.description}
+                      >
+                        <div className="font-medium text-gray-900">{document.title}</div>
+                        <p className="text-xs text-gray-500 mt-1 line-clamp-2">
+                          {document.description}
+                        </p>
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+
+            <Link href="#country" className="text-lg  text-gray-700 transition-colors hover:text-[#0A9DB2] font-semibold">
+              Countries
+            </Link>
+            
+            <Link href="/study-abroad" className="text-lg font-semibold text-gray-700 transition-colors hover:text-[#0A9DB2]">
+              Abroad Study
+            </Link>
+          </nav>
+
+          <div className={`${isMenuOpen ? "flex" : "hidden"} mt-5 w-full justify-center md:mt-0 md:flex md:w-auto`}>
+            <Link
+              href="/contact"
+              className="rounded-md bg-[#0A9DB2] px-8 py-3 text-lg font-semibold text-white transition-all hover:bg-[#0A9DB2] hover:shadow-lg w-full md:w-auto text-center"
+            >
+              Contact us
+            </Link>
+          </div>
         </div>
-      </div>
-    </header>
+      </header>
+      {/* Add a spacer to prevent content from hiding behind fixed navbar */}
+      <div className="h-[72px] md:h-[80px] lg:h-[96px]"></div>
+    </>
   );
 };
 

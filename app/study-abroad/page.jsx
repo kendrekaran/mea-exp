@@ -3,6 +3,7 @@ import ServicesOffered from "../components/study-abroad/ServicesOffered";
 import CountryServices from "../components/study-abroad/CountryServices";
 import WhyChooseUs from "../components/study-abroad/WhyChooseUs";
 import ContactSection from "../components/MEA_Attestation/ContactSection";
+import ScrollToTop from "../components/ScrollToTop";
 
 export const metadata = {
   title: "Study Abroad Documentation Services | MEA Expert - Complete Assistance",
@@ -25,6 +26,7 @@ export const metadata = {
 export default function StudyAbroadPage() {
   return (
     <div className="min-h-screen bg-gray-50">
+      <ScrollToTop />
       <ServiceHeader />
       <ServicesOffered />
       <CountryServices />

@@ -5,6 +5,7 @@ import UsageSection from "../components/translation/UsageSection";
 import WhyChooseUs from "../components/translation/WhyChooseUs";
 import RequirementsSection from "../components/translation/RequirementsSection";
 import ContactSection from "../components/MEA_Attestation/ContactSection";
+import ScrollToTop from "../components/ScrollToTop";
 
 export const metadata = {
   title: "Professional Document Translation Services | MEA Expert",
@@ -27,6 +28,7 @@ export const metadata = {
 export default function TranslationPage() {
   return (
     <div className="min-h-screen bg-gray-50">
+      <ScrollToTop />
       <ServiceHeader />
       <Languages />
       <DocumentTypes />

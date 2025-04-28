@@ -8,6 +8,7 @@ import MEAServices from "./components/ServicesSection";
 import StatsSection from "./components/StatsSection";
 import StepsSection from "./components/StepsSection";
 import TestimonialSection from "./components/TestimonialsSectin";
+import ScrollToTop from "./components/ScrollToTop";
 
 // app/page.tsx
 export const metadata = {
@@ -32,6 +33,7 @@ export const metadata = {
 export default function Home() {
   return (
     <div className="smooth-scroll">
+      <ScrollToTop />
       <section id="hero">
         <HeroSection />
       </section>

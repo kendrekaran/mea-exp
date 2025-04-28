@@ -6,6 +6,7 @@ import PricingSection from "../components/apostille/ServiceFees";
 import AttestationVsApostille from "../components/apostille/AttestationVsApostille";
 import WhyChooseUs from "../components/apostille/WhyChooseUs";
 import ContactSection from "../components/MEA_Attestation/ContactSection";
+import ScrollToTop from "../components/ScrollToTop";
 
 export const metadata = {
   title: "Apostille Services in India | MEA Expert - All Document Types",
@@ -28,6 +29,7 @@ export const metadata = {
 export default function ApostillePage() {
   return (
     <div className="min-h-screen bg-gray-50">
+      <ScrollToTop />
       <ServiceHeader />
       <AboutApostille />
       <DocumentTypes />

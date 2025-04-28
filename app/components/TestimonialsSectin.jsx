@@ -1,7 +1,8 @@
 "use client"
-import { useRef } from 'react';
+import { useRef, useEffect } from 'react';
 import Image from 'next/image';
 import { ArrowLeftIcon, ArrowRight } from 'lucide-react';
+import Head from 'next/head';
 
 export default function TestimonialSection() {
   const carouselRef = useRef(null);
@@ -57,70 +58,104 @@ export default function TestimonialSection() {
     },
   ];
 
+  // Add structured data
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": testimonials.map((testimonial, index) => ({
+      "@type": "Review",
+      "position": index + 1,
+      "author": {
+        "@type": "Person",
+        "name": testimonial.name
+      },
+      "reviewBody": testimonial.text,
+      "about": {
+        "@type": "Service",
+        "name": testimonial.position
+      }
+    }))
+  };
+
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify(jsonLd);
+    document.head.appendChild(script);
+    return () => document.head.removeChild(script);
+  }, []);
+
   return (
-    <div className="max-w-7xl mx-auto px-4 py-12">
-      
-      <div className="text-center ">
-          
+    <section className="max-w-7xl mx-auto px-4 py-12" aria-label="Client Testimonials">
+      <Head>
+        <title>Client Success Stories - Visa and Immigration Services</title>
+        <meta name="description" content="Read authentic testimonials from our successful clients who obtained visas and immigration services through MEA Expert." />
+        <meta name="keywords" content="visa testimonials, immigration success stories, MEA Expert reviews" />
+      </Head>
+
+      <header className="text-center">
         <h2 className="text-xl poppins-medium mb-2">Our Clients Reviews</h2>
         <h1 className="text-5xl poppins-medium mb-4">
           <span className="text-black">What Our </span>
           <span className="text-[#0A9DB2]">Clients </span>
           <span className="text-black">Say </span>
         </h1>
-      </div>
-      
-      
+      </header>
+
       <div 
         ref={carouselRef}
         className="relative overflow-x-auto whitespace-nowrap py-5 scrollbar-hide scroll-smooth"
         style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+        role="region"
+        aria-label="Testimonials Carousel"
       >
-        <div className="inline-flex gap-5 px-5">
+        <div className="inline-flex gap-5 px-5" role="list">
           {testimonials.map((testimonial) => (
-            <div 
+            <article 
               key={testimonial.id} 
               className="bg-white rounded-lg shadow-md p-6 w-80 whitespace-normal transition-transform duration-300 hover:-translate-y-1"
+              role="listitem"
             >
-              <div className="text-gray-600 text-sm leading-relaxed mb-6 h-44 overflow-y-auto">
+              <blockquote className="text-gray-600 text-sm leading-relaxed mb-6 h-44 overflow-y-auto">
                 <p>{testimonial.text}</p>
-              </div>
-              <div className="flex items-center">
+              </blockquote>
+              <footer className="flex items-center">
                 <div className="w-12 h-12 rounded-full bg-gray-200 overflow-hidden mr-4">
                   <div className="relative w-full h-full">
                     <Image 
                       src={testimonial.image}
-                      alt={testimonial.name}
+                      alt={`${testimonial.name} - ${testimonial.position}`}
                       layout="fill"
                       objectFit="cover"
                     />
                   </div>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-800">{testimonial.name}</h3>
+                  <cite className="font-semibold text-gray-800 not-italic">{testimonial.name}</cite>
                   <p className="text-[#0A9DB2] text-sm">{testimonial.position}</p>
                 </div>
-              </div>
-            </div>
+              </footer>
+            </article>
           ))}
         </div>
       </div>
-      
-      
-      <div className="flex justify-center mt-8 gap-4">
+
+      <div className="flex justify-center mt-8 gap-4" role="group" aria-label="Carousel Navigation">
         <button 
           onClick={() => scrollCarousel(-380)}
           className="w-12 h-12 rounded-full bg-[#0A9DB2] text-white flex items-center justify-center hover:bg-[#087f90] transition-colors"
+          aria-label="Previous testimonials"
         >
           <ArrowLeftIcon className="w-6 h-6" />
         </button>
         <button 
           onClick={() => scrollCarousel(380)}
           className="w-12 h-12 rounded-full bg-[#0A9DB2] text-white flex items-center justify-center hover:bg-[#087f90] transition-colors"
+          aria-label="Next testimonials"
         >
           <ArrowRight className="w-6 h-6" />
         </button>
       </div>
-    </div>
+    </section>
   );
 }

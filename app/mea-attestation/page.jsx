@@ -7,6 +7,7 @@ import MEAvsMOFA from "../components/MEA_Attestation/MEAvsMOFA";
 import WhyChooseUs from "../components/MEA_Attestation/WhyChooseUs";
 import ContactSection from "../components/MEA_Attestation/ContactSection";
 import FAQSection from "../components/MEA_Attestation/FAQSection";
+import ScrollToTop from "../components/ScrollToTop";
 
 export const metadata = {
   title: "MEA Attestation Services in India | MEA Expert - Trusted & Official",
@@ -86,6 +87,7 @@ export default function ServicesPage() {
       />
       <div className="min-h-screen bg-gray-50">
         {/* Service Header */}
+        <ScrollToTop />
         <ServiceHeader />
         <AboutSection />
         <DocumentsSection />

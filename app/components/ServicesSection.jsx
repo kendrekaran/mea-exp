@@ -1,11 +1,12 @@
 "use client"
 import { ArrowRight } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
+import Head from 'next/head';
 
 export default function MEAServices() {
   const [hoveredId, setHoveredId] = useState(null);
-  
+
   const services = [
     {
       id: 1,
@@ -73,40 +74,83 @@ export default function MEAServices() {
     }
   ];
 
-  return (
-    <div className=" py-16  md:pb-16 md:py-0">
-      <div className="container mx-auto px-4 max-w-7xl">
-        <div className="text-center mb-16">
-          
-          <h2 className="text-xl poppins-medium mb-2">MEA Services</h2>
-        <h1 className="text-5xl poppins-medium mb-4">
-          <span className="text-black">Certificate </span>
-          <span className="text-[#0A9DB2]">Attestation</span>
-          <span className="text-black"> and</span>
-        </h1>
-        <h1 className="text-5xl poppins-medium mb-6">
-          <span className="text-[#0A9DB2]">Apostilles</span>
-          <span className="text-black"> Services in India</span>
-        </h1>
-        <p className="text-gray-600 poppins-medium text-sm">
-          We are a reliable and professional attestation and apostille service agency.
-        </p>
-      </div>
+  // Move jsonLd after services array
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "MEA Document Attestation Services",
+    "provider": {
+      "@type": "Organization",
+      "name": "MEA Attestation Services"
+    },
+    "serviceType": "Document Attestation",
+    "areaServed": "India",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "itemListElement": services.map((service) => ({
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": service.title,
+          "description": service.description
+        }
+      }))
+    }
+  };
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify(jsonLd);
+    document.head.appendChild(script);
+
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, [jsonLd]); // Add jsonLd as dependency
+
+  return (
+    <section className="py-16 md:pb-16 md:py-0" aria-label="MEA Services Section">
+      <Head>
+        <title>MEA Attestation & Apostille Services in India | Document Authentication</title>
+        <meta name="description" content="Professional MEA attestation, apostille, and document authentication services across India. Expert assistance for visa, immigration, and educational documents." />
+        <meta name="keywords" content="MEA attestation, apostille services, document authentication, visa services, embassy attestation, India" />
+      </Head>
+
+      <div className="container mx-auto px-4 max-w-7xl">
+        <header className="text-center mb-16">
+          <h2 className="text-xl poppins-medium mb-2">MEA Services</h2>
+          <h1 className="text-5xl poppins-medium mb-4">
+            <span className="text-black">Certificate </span>
+            <span className="text-[#0A9DB2]">Attestation</span>
+            <span className="text-black"> and</span>
+          </h1>
+          <h1 className="text-5xl poppins-medium mb-6">
+            <span className="text-[#0A9DB2]">Apostilles</span>
+            <span className="text-black"> Services in India</span>
+          </h1>
+          <p className="text-gray-600 poppins-medium text-sm">
+            We are a reliable and professional attestation and apostille service agency.
+          </p>
+        </header>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" role="list">
           {services.map((service) => (
             <Link 
-            href={service.link} 
+              href={service.link} 
               key={service.id} 
               className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col h-full transform hover:-translate-y-1"
               onMouseEnter={() => setHoveredId(service.id)}
               onMouseLeave={() => setHoveredId(null)}
+              role="listitem"
+              aria-label={`${service.title} - ${service.description}`}
             >
               <div className="h-48 overflow-hidden">
                 <img 
                   src={service.image} 
-                  alt={service.title} 
-                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-110" 
+                  alt={`${service.title} - ${service.description}`}
+                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                  loading="lazy"
                 />
               </div>
               
@@ -142,6 +186,6 @@ export default function MEAServices() {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }

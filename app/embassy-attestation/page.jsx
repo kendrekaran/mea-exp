@@ -8,6 +8,7 @@ import WhyChooseUs from "../components/embassy-attestation/WhyChooseUs";
 
 import ContactSection from "../components/MEA_Attestation/ContactSection";
 import AboutAttestation from "../components/embassy-attestation/AboutAttestation";
+import ScrollToTop from "../components/ScrollToTop";
 
 export const metadata = {
   title: "Embassy Attestation Services in India | MEA Expert - Trusted & Quick",
@@ -30,6 +31,7 @@ export const metadata = {
 export default function EmbassyAttestationPage() {
   return (
     <div className="min-h-screen bg-gray-50">
+      <ScrollToTop />
       <ServiceHeader />
       <AboutAttestation />
       <DocumentTypes />

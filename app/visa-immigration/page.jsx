@@ -4,6 +4,7 @@ import ProcessSupport from "../components/visa-immigration/ProcessSupport";
 import CountryServices from "../components/visa-immigration/CountryServices";
 import WhyChooseUs from "../components/visa-immigration/WhyChooseUs";
 import ContactSection from "../components/MEA_Attestation/ContactSection";
+import ScrollToTop from "../components/ScrollToTop";
 
 export const metadata = {
   title: "Visa & Immigration Services | MEA Expert - Expert Guidance",
@@ -26,6 +27,7 @@ export const metadata = {
 export default function VisaImmigrationPage() {
   return (
     <div className="min-h-screen bg-gray-50">
+      <ScrollToTop />
       <ServiceHeader />
       <VisaCategories />
       <ProcessSupport />

@@ -5,6 +5,7 @@ import ProcessSteps from "../components/chamber-commerce/ProcessSteps";
 import UseCases from "../components/chamber-commerce/UseCases";
 import WhyChooseUs from "../components/chamber-commerce/WhyChooseUs";
 import ContactSection from "../components/MEA_Attestation/ContactSection";
+import ScrollToTop from "../components/ScrollToTop";
 
 export const metadata = {
   title: "Chamber of Commerce Attestation Services | MEA Expert",
@@ -27,6 +28,7 @@ export const metadata = {
 export default function ChamberAttestationPage() {
   return (
     <div className="min-h-screen bg-gray-50">
+      <ScrollToTop />
       <ServiceHeader />
       <AboutAttestation />
       <DocumentTypes />
