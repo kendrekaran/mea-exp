@@ -60,10 +60,10 @@ function CountrySection() {
   return (
     <section id="country-visa-assistance" className="min-h-screen">
       <div className="text-center mb-8 mt-16">
-        <h2 className="text-xl poppins-medium mb-2">COUNTRIES WE OFFER</h2>
-        <h1 className="text-5xl poppins-medium mb-4">
+        <h3 className="text-xl poppins-medium mb-2">COUNTRIES WE OFFER</h3>
+        <h2 className="text-5xl poppins-medium mb-4">
           <span className="text-[#0A9DB2]">Visa Assistance</span>
-        </h1>
+        </h2>
         <p className="text-5xl poppins-medium mb-6">
           <span className="text-black"> in following countries</span>
         </p>

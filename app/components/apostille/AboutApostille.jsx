@@ -41,9 +41,9 @@ export default function AboutApostille() {
             <section className="py-16 px-4 md:px-8 lg:px-16 max-w-7xl mx-auto" aria-label="About Apostille Services">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start">
                     <article className="flex flex-col">
-                        <h1 className="text-3xl md:text-4xl md:px-4 poppins-medium mb-8">
+                        <h2 className="text-3xl md:text-4xl md:px-4 poppins-medium mb-8">
                             What Is Apostille?
-                        </h1>
+                        </h2>
 
                         <figure className="relative w-full h-[400px] md:h-[400px] rounded-lg overflow-hidden">
                             <Image

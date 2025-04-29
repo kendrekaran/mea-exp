@@ -68,13 +68,13 @@ export default function AboutAttestation() {
             <h2 className="text-[#0A9DB2] text-lg font-medium mb-2">
               Understanding Attestation
             </h2>
-            <h1 
+            <h2
               id="attestation-title"
               className="text-3xl md:text-4xl font-semibold mb-6"
               itemProp="headline"
             >
               What is HRD Attestation?
-            </h1>
+            </h2>
             <div itemProp="articleBody">
               <p className="text-gray-600 mb-6 text-lg leading-relaxed">
                 <strong>HRD Attestation</strong> refers to the authentication of educational certificates by the Human Resource Development (HRD) department of the respective Indian state. It is a mandatory step before MEA attestation or apostille attestation for educational documents.

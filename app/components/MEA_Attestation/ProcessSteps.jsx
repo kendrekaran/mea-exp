@@ -79,13 +79,13 @@ export default function ProcessSection() {
         <div className="container mx-auto max-w-6xl">
           <header className="text-center mb-12">
             <p className="text-mea font-semibold mb-2">HOW IT WORKS</p>
-            <h1 
+            <h2
               id="process-title"
               className="text-3xl md:text-4xl font-bold mb-6"
               itemProp="name"
             >
               What is the Attestation Process?
-            </h1>
+            </h2>
             <div className="w-24 h-1 bg-mea mx-auto bg-[#0A9DB2] mb-8"></div>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto">
               The MEA attestation process usually involves three major steps. Our experts will guide you through each stage for a smooth experience.

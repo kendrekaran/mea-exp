@@ -146,13 +146,13 @@ export default function DocumentsSection() {
         <div className="container mx-auto max-w-6xl">
           <header className="text-center mb-14">
             <p className="text-cyan-600 font-semibold tracking-wider mb-3">DOCUMENTATION</p>
-            <h1 
+            <h2
               id="documents-title"
               className="text-3xl md:text-4xl font-bold mb-6"
               itemProp="name"
             >
               Documents That Require MEA Attestation
-            </h1>
+            </h2>
             <div className="w-24 h-1 bg-cyan-600 mx-auto mb-8" role="presentation"></div>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto">
               We assist with attestation for various types of documents. Choose a category below to explore.

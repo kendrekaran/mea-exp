@@ -119,12 +119,12 @@ export default function MEAServices() {
 
       <div className="container mx-auto px-4 max-w-7xl">
         <header className="text-center mb-16">
-          <h2 className="text-xl poppins-medium mb-2">MEA Services</h2>
-          <h1 className="text-5xl poppins-medium mb-4">
+          <h3 className="text-xl poppins-medium mb-2">MEA Services</h3>
+          <h2 className="text-5xl poppins-medium mb-4">
             <span className="text-black">Certificate </span>
             <span className="text-[#0A9DB2]">Attestation</span>
             <span className="text-black"> and</span>
-          </h1>
+          </h2>
           <h1 className="text-5xl poppins-medium mb-6">
             <span className="text-[#0A9DB2]">Apostilles</span>
             <span className="text-black"> Services in India</span>

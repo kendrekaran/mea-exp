@@ -65,11 +65,11 @@ export default function OfficeSection() {
 
       <div className="mt-12 mb-16">
         <header className="text-center mb-24">
-          <h2 className="text-xl poppins-medium mb-2">Our Offices</h2>
-          <h1 className="text-5xl poppins-medium mb-4">
+          <h3 className="text-xl poppins-medium mb-2">Our Offices</h3>
+          <h2 className="text-5xl poppins-medium mb-4">
             <span className="text-black">Explore Our </span>
             <span className="text-[#0A9DB2]">Office </span>
-          </h1>
+          </h2>
         </header>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" role="list">

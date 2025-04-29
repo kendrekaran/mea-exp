@@ -94,12 +94,12 @@ export default function TestimonialSection() {
       </Head>
 
       <header className="text-center">
-        <h2 className="text-xl poppins-medium mb-2">Our Clients Reviews</h2>
-        <h1 className="text-5xl poppins-medium mb-4">
+        <h3 className="text-xl poppins-medium mb-2">Our Clients Reviews</h3>
+        <h2 className="text-5xl poppins-medium mb-4">
           <span className="text-black">What Our </span>
           <span className="text-[#0A9DB2]">Clients </span>
           <span className="text-black">Say </span>
-        </h1>
+        </h2>
       </header>
 
       <div 

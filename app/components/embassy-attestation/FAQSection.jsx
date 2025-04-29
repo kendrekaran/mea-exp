@@ -88,12 +88,12 @@ export default function FAQSection() {
         <div className="container mx-auto max-w-4xl">
           <header className="text-center mb-12">
             <p className="text-[#0A9DB2] font-semibold mb-2">FAQ</p>
-            <h1 
+            <h2
               id="faq-title"
               className="text-3xl md:text-4xl font-bold mb-6"
             >
               Frequently Asked Questions
-            </h1>
+            </h2>
             <div className="w-24 h-1 bg-[#0A9DB2] mx-auto mb-8" role="presentation"></div>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto">
               Get answers to common questions about embassy attestation services

@@ -1,6 +1,6 @@
 "use client"
-import React, { useState, useEffect } from 'react';
-import { Globe2, BookOpen, FileSearch, Timer, Shield, Barcode, Truck, Headphones, PiggyBank, Mail, ClipboardCheck, FileText, CreditCard, Search, FileCheck } from 'lucide-react';
+import React, {  useEffect } from 'react';
+import {  ClipboardCheck, FileText, CreditCard, Search, FileCheck } from 'lucide-react';
 import Head from 'next/head';
 
 
@@ -70,10 +70,10 @@ function StepsSection() {
       <section className="py-16 bg-white" aria-label="MEA Apostille Process">
         <div className="container mx-auto px-4">
           <header className="text-center mb-8">
-            <h1 className="text-5xl poppins-medium mb-16">
+            <h2 className="text-5xl poppins-medium mb-16">
               <span className="text-black">Steps to get </span>
               <span className="text-[#0A9DB2]">MEA Apostille</span>
-            </h1>
+            </h2>
           </header>
 
           <div className="max-w-3xl mx-auto" role="list">

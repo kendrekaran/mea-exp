@@ -12,13 +12,13 @@ export default function AboutSection() {
       >
         <div className="flex flex-col">
           <header className="mb-10">
-            <h2 className="text-[#0A9DB2] md:px-4 text-medium text-xl md:text-2xl font-medium mb-3">
+            <h3 className="text-[#0A9DB2] md:px-4 text-medium text-xl md:text-2xl font-medium mb-3">
               About the company
-            </h2>
+            </h3>
 
-            <h1 className="text-3xl md:text-4xl md:px-4 poppins-medium">
+            <h2 className="text-3xl md:text-4xl md:px-4 poppins-medium">
               We're Trusted Attestation Apostille Agency.
-            </h1>
+            </h2>
           </header>
 
           <figure className="relative w-full h-[450px] md:h-[500px] rounded-lg overflow-hidden">

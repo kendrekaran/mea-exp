@@ -74,13 +74,13 @@ export default function DummyTickets() {
       >
         <div className="container mx-auto px-4 max-w-7xl">
           <header className="text-center mb-12">
-            <h1 
+            <h2
               id="dummy-tickets-title"
               className="text-3xl font-bold mb-6"
               itemProp="name"
             >
               <span className="text-[#0A9DB2]">Dummy Flight Tickets</span> with Verifiable PNR
-            </h1>
+            </h2>
             <p 
               className="text-gray-600 max-w-3xl mx-auto mb-8"
               itemProp="description"

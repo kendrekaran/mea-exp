@@ -36,7 +36,7 @@ export default function ServiceHeader() {
           transition={{ duration: 0.5 }}
           className="text-center max-w-5xl mx-auto"
         >
-          <h1 
+          <h1
             className="text-3xl md:text-4xl lg:text-5xl font-bold poppins-bold leading-tight mb-4"
             itemScope 
             itemType="https://schema.org/Service"

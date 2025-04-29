@@ -197,9 +197,9 @@ export default function DocumentTypes() {
       <section id="apostille-documents" className="py-20 px-4 bg-white">
         <div className="container mx-auto max-w-6xl">
           <header className="text-center mb-14">
-            <h1 className="text-3xl md:text-4xl font-bold mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Documents Eligible for Apostille Authentication
-            </h1>
+            </h2>
             <div className="w-24 h-1 bg-cyan-600 mx-auto mb-8" aria-hidden="true"></div>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto">
               We provide comprehensive apostille attestation services for all types of documents.

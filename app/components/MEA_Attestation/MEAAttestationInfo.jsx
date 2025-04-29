@@ -31,13 +31,13 @@ const AboutSection = () => {
         <div className="container mx-auto max-w-6xl">
           <header className="text-center mb-14">
             <p className="text-cyan-600 font-semibold tracking-wider mb-3">LEARN MORE</p>
-            <h1 
+            <h2
               id="mea-title"
               className="text-3xl md:text-4xl font-bold mb-6"
               itemProp="headline"
             >
               What is MEA Attestation?
-            </h1>
+            </h2>
             <div className="w-24 h-1 bg-cyan-600 mx-auto" role="presentation"></div>
           </header>
           

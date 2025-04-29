@@ -60,13 +60,13 @@ export default function WhyChooseUs() {
         <div className="container mx-auto max-w-6xl">
           <header className="text-center mb-14">
             <p className="text-[#0A9DB2] font-semibold tracking-wider mb-3">OUR ADVANTAGES</p>
-            <h1 
+            <h2
               id="features-title"
               className="text-3xl md:text-4xl font-bold mb-6"
               itemProp="name"
             >
               Why Choose MEA EXPERT?
-            </h1>
+            </h2>
             <div className="w-24 h-1 bg-[#0A9DB2] mx-auto" role="presentation"></div>
           </header>
 

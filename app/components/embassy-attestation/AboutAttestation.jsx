@@ -28,12 +28,12 @@ export default function AboutAttestation() {
         <article className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="order-2 md:order-1 flex flex-col">
             <header className="mb-8">
-              <h1 
+              <h2
                 id="embassy-title"
                 className="text-[#0A9DB2] text-xl md:text-2xl font-medium mb-3"
               >
                 Understanding Embassy Attestation
-              </h1>
+              </h2>
               <h2 className="text-3xl md:text-5xl poppins-medium mb-8">
                 What is Embassy Attestation?
               </h2>

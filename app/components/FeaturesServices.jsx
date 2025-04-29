@@ -97,14 +97,12 @@ function FeaturesSection() {
       <section className="py-16" aria-label="Service Features">
         <div className="container mx-auto px-4">
           <header className="text-center mb-8">
-            <h2 className="text-xl poppins-medium mb-2">Safe. Fast. Reliable</h2>
-            <h1 className="text-5xl poppins-medium mb-4">
-              <span className="text-black">Why people Trust Us</span>
-            </h1>
-            <h1 className="text-5xl poppins-medium mb-6">
+            <h3 className="text-xl poppins-medium mb-2">Safe. Fast. Reliable</h3>
+            <h2 className="text-5xl poppins-medium mb-4">
+              <span className="text-black">Why people Trust Us</span>poppins-medium mb-6"
               <span className="text-black">for their</span>
               <span className="text-[#0A9DB2]"> Documents</span>
-            </h1>
+            </h2>
           </header>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:py-8 gap-8" role="list">

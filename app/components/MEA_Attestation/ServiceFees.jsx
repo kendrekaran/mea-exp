@@ -29,13 +29,13 @@ const PricingSection = () => {
         <div className="container mx-auto max-w-6xl">
           <header className="text-center mb-14">
             <p className="text-[#0A9DB2] font-semibold tracking-wider mb-3">PRICING</p>
-            <h1 
+            <h2
               id="pricing-title"
               className="text-3xl md:text-4xl font-bold mb-6"
               itemProp="name"
             >
               MEA Attestation Fees
-            </h1>
+            </h2>
             <div className="w-24 h-1 bg-[#0A9DB2] mx-auto mb-8" role="presentation"></div>
           </header>
 

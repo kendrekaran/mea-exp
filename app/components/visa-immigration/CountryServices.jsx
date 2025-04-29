@@ -105,13 +105,13 @@ export default function CountryServices() {
               <Globe2 className="text-[#0A9DB2] w-6 h-6 mr-2" aria-hidden="true" />
               <p className="text-[#0A9DB2] font-semibold">COUNTRIES</p>
             </div>
-            <h1 
+            <h2
               id="countries-title"
               className="text-3xl md:text-4xl font-bold mb-6"
               itemProp="name"
             >
               Countries We Serve
-            </h1>
+            </h2>
             <div className="w-24 h-1 bg-[#0A9DB2] mx-auto mb-8" role="presentation"></div>
             <p 
               className="text-lg text-gray-700 max-w-3xl mx-auto"
