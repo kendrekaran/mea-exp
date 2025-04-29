@@ -58,7 +58,7 @@ function CountrySection() {
   }, [searchTerm, selectedRegion]);
 
   return (
-    <section id="country-visa-assistance" className="min-h-screen">
+    <section id="country" className="min-h-screen">
       <div className="text-center mb-8 mt-16">
         <h3 className="text-xl poppins-medium mb-2">COUNTRIES WE OFFER</h3>
         <h2 className="text-5xl poppins-medium mb-4">

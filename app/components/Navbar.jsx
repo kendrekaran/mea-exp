@@ -121,6 +121,34 @@ const Navbar = () => {
   const servicesDropdownRef = useRef(null);
   const documentsDropdownRef = useRef(null);
 
+  // Add click handlers
+  const handleServicesClick = () => {
+    setIsServicesOpen(!isServicesOpen);
+    setIsDocumentsOpen(false);
+  };
+
+  const handleDocumentsClick = () => {
+    setIsDocumentsOpen(!isDocumentsOpen);
+    setIsServicesOpen(false);
+  };
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        servicesDropdownRef.current && 
+        !servicesDropdownRef.current.contains(event.target) &&
+        documentsDropdownRef.current && 
+        !documentsDropdownRef.current.contains(event.target)
+      ) {
+        setIsServicesOpen(false);
+        setIsDocumentsOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
   // Add structured data
   const jsonLd = {
     "@context": "https://schema.org",
@@ -199,7 +227,7 @@ const Navbar = () => {
             {/* Services Dropdown */}
             <div className="relative" ref={servicesDropdownRef}>
               <button
-                onClick={() => setIsServicesOpen(!isServicesOpen)}
+                onClick={handleServicesClick}
                 className="text-lg flex font-semibold text-gray-700 transition-colors hover:text-[#0A9DB2]"
                 aria-expanded={isServicesOpen}
                 aria-controls="services-dropdown"
@@ -233,7 +261,7 @@ const Navbar = () => {
             {/* Documents Dropdown */}
             <div className="relative" ref={documentsDropdownRef}>
               <button
-                onClick={() => setIsDocumentsOpen(!isDocumentsOpen)}
+                onClick={handleDocumentsClick}
                 className="text-lg flex font-semibold text-gray-700 transition-colors hover:text-[#0A9DB2]"
                 aria-expanded={isDocumentsOpen}
                 aria-controls="documents-dropdown"
