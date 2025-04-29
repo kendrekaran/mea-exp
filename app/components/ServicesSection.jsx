@@ -124,11 +124,10 @@ export default function MEAServices() {
             <span className="text-black">Certificate </span>
             <span className="text-[#0A9DB2]">Attestation</span>
             <span className="text-black"> and</span>
-          </h2>
-          <h1 className="text-5xl poppins-medium mb-6">
+            <br />
             <span className="text-[#0A9DB2]">Apostilles</span>
             <span className="text-black"> Services in India</span>
-          </h1>
+          </h2>
           <p className="text-gray-600 poppins-medium text-sm">
             We are a reliable and professional attestation and apostille service agency.
           </p>
