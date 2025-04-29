@@ -1,5 +1,6 @@
 'use client';
 
+import Head from 'next/head';
 import { FileCheck, GraduationCap, Plane, MessageSquare } from 'lucide-react';
 
 const categories = [
@@ -46,47 +47,97 @@ const categories = [
 ];
 
 const CategoryCard = ({ category: { icon: Icon, title, services } }) => (
-  <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow border border-gray-100">
+  <article 
+    className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow border border-gray-100"
+    itemScope
+    itemType="https://schema.org/Service"
+  >
     <div className="flex items-start mb-4">
-      <div className="bg-cyan-100 rounded-full p-3 mr-4">
+      <div className="bg-cyan-100 rounded-full p-3 mr-4" aria-hidden="true">
         <Icon className="text-[#0A9DB2] w-6 h-6" />
       </div>
       <div>
-        <h3 className="text-xl font-bold mb-3 text-gray-800">{title}</h3>
-        <ul className="space-y-2">
+        <h3 className="text-xl font-bold mb-3 text-gray-800" itemProp="name">{title}</h3>
+        <ul 
+          className="space-y-2"
+          role="list"
+          aria-label={`${title} services`}
+          itemProp="offers"
+        >
           {services.map((service, index) => (
-            <li key={index} className="flex items-center text-gray-600">
-              <span className="mr-2 text-[#0A9DB2]">✓</span>
+            <li 
+              key={index} 
+              className="flex items-center text-gray-600"
+              itemProp="hasOfferCatalog"
+            >
+              <span className="mr-2 text-[#0A9DB2]" aria-hidden="true">✓</span>
               {service}
             </li>
           ))}
         </ul>
       </div>
     </div>
-  </div>
+  </article>
 );
 
 export default function ServicesOffered() {
   return (
-    <section className="py-16 px-4 bg-gray-50">
-      <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-12">
-          <h6 className="text-[#0A9DB2] font-semibold mb-2">SERVICES</h6>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Services We Offer for Study Abroad Aspirants
-          </h2>
-          <div className="w-24 h-1 bg-[#0A9DB2] mx-auto mb-8"></div>
-          <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-            Comprehensive support at every step of your study abroad journey
-          </p>
-        </div>
+    <>
+      <Head>
+        <meta name="description" content="Comprehensive study abroad services including document attestation, university application guidance, visa filing, and pre-departure support for international students." />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "name": "Study Abroad Services",
+            "itemListElement": categories.map((category, index) => ({
+              "@type": "Service",
+              "position": index + 1,
+              "name": category.title,
+              "offers": {
+                "@type": "Offer",
+                "itemOffered": category.services
+              }
+            }))
+          })}
+        </script>
+      </Head>
+      <section 
+        className="py-16 px-4 bg-gray-50"
+        aria-labelledby="services-title"
+        itemScope
+        itemType="https://schema.org/Service"
+      >
+        <div className="container mx-auto max-w-6xl">
+          <header className="text-center mb-12">
+            <p className="text-[#0A9DB2] font-semibold mb-2">SERVICES</p>
+            <h1 
+              id="services-title"
+              className="text-3xl md:text-4xl font-bold mb-6"
+              itemProp="name"
+            >
+              Services We Offer for Study Abroad Aspirants
+            </h1>
+            <div className="w-24 h-1 bg-[#0A9DB2] mx-auto mb-8" role="presentation"></div>
+            <p 
+              className="text-lg text-gray-700 max-w-3xl mx-auto"
+              itemProp="description"
+            >
+              Comprehensive support at every step of your study abroad journey
+            </p>
+          </header>
 
-        <div className="grid md:grid-cols-2 gap-6">
-          {categories.map((category, index) => (
-            <CategoryCard key={index} category={category} />
-          ))}
+          <div 
+            className="grid md:grid-cols-2 gap-6"
+            role="list"
+            aria-label="Study abroad services"
+          >
+            {categories.map((category, index) => (
+              <CategoryCard key={index} category={category} />
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }

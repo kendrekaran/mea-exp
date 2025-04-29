@@ -1,18 +1,66 @@
-import React from 'react';
+'use client';
 
-const DocumentTypeHeader = ({ title, description }) => {
+import { useEffect } from 'react';
+import { motion } from 'framer-motion';
+
+export default function DocumentTypeHeader({ title, description }) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": title,
+    "description": description,
+    "provider": {
+      "@type": "Organization",
+      "name": "MEA Expert",
+      "url": "https://meaexpert.com"
+    },
+    "serviceType": "Document Attestation",
+    "areaServed": "India",
+    "category": "Legal Services"
+  };
+
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify(jsonLd);
+    document.head.appendChild(script);
+    return () => document.head.removeChild(script);
+  }, [title, description]);
+
   return (
-    <div className="bg-gradient-to-r from-[#0A9DB2] to-[#136E7A] text-white py-16 md:py-24">
-      <div className="container mx-auto px-4 max-w-6xl">
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-          {title}
-        </h1>
-        <p className="text-lg md:text-xl text-gray-100 max-w-2xl">
-          {description}
-        </p>
+    <header 
+      className="bg-gradient-to-r from-[#0A9DB2] to-[#065660] text-white mt-1" 
+      role="banner"
+      itemScope
+      itemType="https://schema.org/Service"
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="text-center max-w-5xl mx-auto"
+        >
+          <h1 
+            className="text-3xl md:text-4xl lg:text-5xl font-bold poppins-bold leading-tight mb-4"
+            itemProp="name"
+          >
+            {title}
+          </h1>
+          <p 
+            className="text-lg md:text-xl poppins-medium mb-8"
+            itemProp="description"
+          >
+            {description}
+          </p>
+          
+          <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg shadow-lg">
+            <p className="text-base md:text-lg poppins-regular">
+              Trust MEA EXPERT for fast, reliable, and government-authorized document attestation services. We ensure your documents are properly legalized for international use with complete authenticity and security.
+            </p>
+          </div>
+        </motion.div>
       </div>
-    </div>
+    </header>
   );
-};
-
-export default DocumentTypeHeader;
+}

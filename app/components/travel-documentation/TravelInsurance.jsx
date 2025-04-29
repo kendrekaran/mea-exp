@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import { ShieldCheck, CreditCard, BookOpen, Globe2 } from 'lucide-react';
 
 const insuranceTypes = [
@@ -43,59 +44,110 @@ const features = [
 
 export default function TravelInsurance() {
   return (
-    <div className="py-16 bg-white">
-      <div className="container mx-auto px-4 max-w-7xl">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-6">
-            <span className="text-[#0A9DB2]">Travel Insurance</span> for Visa
-          </h2>
-          <p className="text-gray-600 max-w-3xl mx-auto mb-8">
-            Stay protected and fulfill visa requirements with travel medical insurance from leading providers
-          </p>
-        </div>
+    <>
+      <Head>
+        <meta name="description" content="Get visa-compliant travel insurance for Schengen, USA, UK visas. Instant policy documents with embassy-approved coverage for all visa types." />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Travel Insurance for Visa",
+            "description": "Visa-compliant travel insurance services",
+            "provider": {
+              "@type": "Organization",
+              "name": "MEA EXPERT"
+            },
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "itemListElement": [...insuranceTypes, ...features].map((item, index) => ({
+                "@type": "Offer",
+                "name": item.title,
+                "description": item.description
+              }))
+            }
+          })}
+        </script>
+      </Head>
+      <section 
+        className="py-16 bg-white"
+        aria-labelledby="insurance-title"
+        itemScope
+        itemType="https://schema.org/Service"
+      >
+        <div className="container mx-auto px-4 max-w-7xl">
+          <header className="text-center mb-12">
+            <h1 
+              id="insurance-title"
+              className="text-3xl font-bold mb-6"
+              itemProp="name"
+            >
+              <span className="text-[#0A9DB2]">Travel Insurance</span> for Visa
+            </h1>
+            <p 
+              className="text-gray-600 max-w-3xl mx-auto mb-8"
+              itemProp="description"
+            >
+              Stay protected and fulfill visa requirements with travel medical insurance from leading providers
+            </p>
+          </header>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-          <div className="bg-gray-50 p-8 rounded-lg">
-            <h3 className="text-xl font-bold mb-6">Insurance Types:</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              {insuranceTypes.map((type, index) => (
-                <div key={index} className="flex items-start">
-                  <div className="bg-cyan-100 rounded-full p-2 mr-4">
-                    <type.icon className="w-5 h-5 text-[#0A9DB2]" />
+          <div 
+            className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12"
+            role="list"
+            aria-label="Insurance types and features"
+          >
+            <article className="bg-gray-50 p-8 rounded-lg">
+              <h2 className="text-xl font-bold mb-6">Insurance Types:</h2>
+              <div 
+                className="grid grid-cols-1 sm:grid-cols-2 gap-6"
+                role="list"
+                aria-label="Available insurance types"
+              >
+                {insuranceTypes.map((type, index) => (
+                  <div 
+                    key={index} 
+                    className="flex items-start"
+                    itemProp="offers"
+                    itemScope
+                    itemType="https://schema.org/Offer"
+                  >
+                    <div className="bg-cyan-100 rounded-full p-2 mr-4" aria-hidden="true">
+                      <type.icon className="w-5 h-5 text-[#0A9DB2]" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold mb-1" itemProp="name">{type.title}</h3>
+                      <p className="text-sm text-gray-600" itemProp="description">{type.description}</p>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="font-semibold mb-1">{type.title}</h4>
-                    <p className="text-sm text-gray-600">{type.description}</p>
+                ))}
+              </div>
+            </article>
+
+            <article className="bg-gray-50 p-8 rounded-lg">
+              <h2 className="text-xl font-bold mb-6">We offer:</h2>
+              <div className="space-y-6">
+                {features.map((feature, index) => (
+                  <div key={index} className="flex items-start">
+                    <div className="bg-cyan-100 rounded-full p-2 mr-4" aria-hidden="true">
+                      <feature.icon className="w-5 h-5 text-[#0A9DB2]" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold mb-1">{feature.title}</h3>
+                      <p className="text-gray-600">{feature.description}</p>
+                    </div>
                   </div>
-                </div>
-              ))}
-            </div>
+                ))}
+              </div>
+            </article>
           </div>
 
-          <div className="bg-gray-50 p-8 rounded-lg">
-            <h3 className="text-xl font-bold mb-6">We offer:</h3>
-            <div className="space-y-6">
-              {features.map((feature, index) => (
-                <div key={index} className="flex items-start">
-                  <div className="bg-cyan-100 rounded-full p-2 mr-4">
-                    <feature.icon className="w-5 h-5 text-[#0A9DB2]" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold mb-1">{feature.title}</h4>
-                    <p className="text-gray-600">{feature.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+          <footer className="bg-gradient-to-r from-cyan-50 to-cyan-100 p-6 rounded-lg text-center">
+            <p className="text-gray-700">
+              <span className="font-medium">Note:</span> All our insurance policies are issued by authorized providers and meet embassy requirements. Perfect for Schengen visa, USA visa, and other international travel needs.
+            </p>
+          </footer>
         </div>
-
-        <div className="bg-gradient-to-r from-cyan-50 to-cyan-100 p-6 rounded-lg text-center">
-          <p className="text-gray-700">
-            <span className="font-medium">Note:</span> All our insurance policies are issued by authorized providers and meet embassy requirements. Perfect for Schengen visa, USA visa, and other international travel needs.
-          </p>
-        </div>
-      </div>
-    </div>
+      </section>
+    </>
   );
 }

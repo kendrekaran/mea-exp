@@ -1,5 +1,6 @@
 'use client';
 
+import Head from 'next/head';
 import {
   Building2,
   ScrollText,
@@ -67,38 +68,71 @@ const documents = [
 ];
 
 const DocumentCard = ({ icon: Icon, title, description }) => (
-  <div className="flex items-start bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow border border-gray-100">
-    <div className="bg-cyan-100 rounded-full p-3 mr-4 text-[#0A9DB2]">
+  <article className="flex items-start bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow border border-gray-100">
+    <div className="bg-cyan-100 rounded-full p-3 mr-4 text-[#0A9DB2]" aria-hidden="true">
       <Icon className="w-6 h-6" />
     </div>
     <div>
       <h3 className="text-xl font-bold mb-2 text-cyan-600">{title}</h3>
       <p className="text-gray-700">{description}</p>
     </div>
-  </div>
+  </article>
 );
 
 export default function DocumentTypes() {
   return (
-    <section className="py-16 px-4 bg-gray-50">
-      <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-12">
-          <h6 className="text-[#0A9DB2] font-semibold mb-2">DOCUMENTATION</h6>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Documents Requiring Chamber of Commerce Attestation
-          </h2>
-          <div className="w-24 h-1 bg-[#0A9DB2] mx-auto mb-8"></div>
-          <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-            We assist with attestation of all types of commercial and business documents
-          </p>
-        </div>
+    <>
+      <Head>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "itemListElement": documents.map((doc, index) => ({
+              "@type": "ListItem",
+              "position": index + 1,
+              "item": {
+                "@type": "Service",
+                "name": doc.title,
+                "description": doc.description
+              }
+            }))
+          })}
+        </script>
+      </Head>
+      <section 
+        className="py-16 px-4 bg-gray-50"
+        aria-labelledby="documents-section-title"
+      >
+        <div className="container mx-auto max-w-6xl">
+          <header className="text-center mb-12">
+            <p className="text-[#0A9DB2] font-semibold mb-2">DOCUMENTATION</p>
+            <h1 
+              id="documents-section-title"
+              className="text-3xl md:text-4xl font-bold mb-6"
+            >
+              Documents Requiring Chamber of Commerce Attestation
+            </h1>
+            <div className="w-24 h-1 bg-[#0A9DB2] mx-auto mb-8" role="presentation"></div>
+            <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+              We assist with attestation of all types of commercial and business documents
+            </p>
+          </header>
 
-        <div className="grid md:grid-cols-2 gap-6">
-          {documents.map((doc, index) => (
-            <DocumentCard key={index} {...doc} />
-          ))}
+          <div 
+            className="grid md:grid-cols-2 gap-6"
+            role="list"
+            aria-label="Document types requiring attestation"
+          >
+            {documents.map((doc, index) => (
+              <DocumentCard 
+                key={index} 
+                {...doc} 
+                role="listitem"
+              />
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }

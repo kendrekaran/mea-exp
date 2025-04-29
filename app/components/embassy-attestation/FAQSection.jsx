@@ -1,23 +1,32 @@
 'use client';
 
+import Head from 'next/head';
 import { useState } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 
-const FAQItem = ({ question, answer, isOpen, onClick }) => (
+const FAQItem = ({ question, answer, isOpen, onClick, index }) => (
   <div className="border-b border-gray-200 last:border-0">
     <button
       className="w-full py-6 text-left flex justify-between items-start"
       onClick={onClick}
+      aria-expanded={isOpen}
+      aria-controls={`faq-answer-${index}`}
+      id={`faq-question-${index}`}
     >
       <span className="font-medium text-lg text-gray-900 pr-8">{question}</span>
       {isOpen ? (
-        <ChevronUp className="w-6 h-6 text-[#0A9DB2]" />
+        <ChevronUp className="w-6 h-6 text-[#0A9DB2]" aria-hidden="true" />
       ) : (
-        <ChevronDown className="w-6 h-6 text-gray-400" />
+        <ChevronDown className="w-6 h-6 text-gray-400" aria-hidden="true" />
       )}
     </button>
     {isOpen && (
-      <div className="pb-6">
+      <div 
+        id={`faq-answer-${index}`}
+        role="region"
+        aria-labelledby={`faq-question-${index}`}
+        className="pb-6"
+      >
         <p className="text-gray-600">{answer}</p>
       </div>
     )}
@@ -55,43 +64,72 @@ export default function FAQSection() {
   ];
 
   return (
-    <section className="py-16 px-4 bg-gray-50">
-      <div className="container mx-auto max-w-4xl">
-        <div className="text-center mb-12">
-          <h6 className="text-[#0A9DB2] font-semibold mb-2">FAQ</h6>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Frequently Asked Questions
-          </h2>
-          <div className="w-24 h-1 bg-[#0A9DB2] mx-auto mb-8"></div>
-          <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-            Get answers to common questions about embassy attestation services
-          </p>
-        </div>
+    <>
+      <Head>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": faqs.map(faq => ({
+              "@type": "Question",
+              "name": faq.question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answer
+              }
+            }))
+          })}
+        </script>
+      </Head>
+      <section 
+        className="py-16 px-4 bg-gray-50"
+        aria-labelledby="faq-title"
+      >
+        <div className="container mx-auto max-w-4xl">
+          <header className="text-center mb-12">
+            <p className="text-[#0A9DB2] font-semibold mb-2">FAQ</p>
+            <h1 
+              id="faq-title"
+              className="text-3xl md:text-4xl font-bold mb-6"
+            >
+              Frequently Asked Questions
+            </h1>
+            <div className="w-24 h-1 bg-[#0A9DB2] mx-auto mb-8" role="presentation"></div>
+            <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+              Get answers to common questions about embassy attestation services
+            </p>
+          </header>
 
-        <div className="bg-white rounded-xl shadow-lg border border-gray-100">
-          <div className="divide-y divide-gray-200">
-            {faqs.map((faq, index) => (
-              <FAQItem
-                key={index}
-                question={faq.question}
-                answer={faq.answer}
-                isOpen={index === openIndex}
-                onClick={() => setOpenIndex(index === openIndex ? -1 : index)}
-              />
-            ))}
+          <div 
+            className="bg-white rounded-xl shadow-lg border border-gray-100"
+            role="region"
+            aria-label="FAQ Accordion"
+          >
+            <div className="divide-y divide-gray-200">
+              {faqs.map((faq, index) => (
+                <FAQItem
+                  key={index}
+                  question={faq.question}
+                  answer={faq.answer}
+                  isOpen={index === openIndex}
+                  onClick={() => setOpenIndex(index === openIndex ? -1 : index)}
+                  index={index}
+                />
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-8 text-center">
+            <p className="text-gray-600">
+              Don't see your question here?{' '}
+              <a href="#contact" className="text-[#0A9DB2] font-medium hover:underline">
+                Contact us
+              </a>{' '}
+              for more information
+            </p>
           </div>
         </div>
-
-        <div className="mt-8 text-center">
-          <p className="text-gray-600">
-            Don't see your question here?{' '}
-            <a href="#contact" className="text-[#0A9DB2] font-medium hover:underline">
-              Contact us
-            </a>{' '}
-            for more information
-          </p>
-        </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }

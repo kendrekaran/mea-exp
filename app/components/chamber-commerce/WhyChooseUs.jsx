@@ -1,5 +1,6 @@
 'use client';
 
+import Head from 'next/head';
 import { 
   Clock, 
   Globe, 
@@ -76,28 +77,45 @@ const chamberRequirements = [
 ];
 
 const FeatureCard = ({ icon: Icon, title, description }) => (
-  <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow border border-gray-100">
-    <div className="bg-cyan-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+  <article 
+    className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow border border-gray-100"
+    itemProp="offer"
+    itemScope
+    itemType="https://schema.org/Offer"
+  >
+    <div className="bg-cyan-100 w-12 h-12 rounded-full flex items-center justify-center mb-4" aria-hidden="true">
       <Icon className="text-[#0A9DB2] w-6 h-6" />
     </div>
-    <h3 className="text-xl font-bold mb-3 text-gray-800">{title}</h3>
-    <p className="text-gray-600">{description}</p>
-  </div>
+    <h3 className="text-xl font-bold mb-3 text-gray-800" itemProp="name">{title}</h3>
+    <p className="text-gray-600" itemProp="description">{description}</p>
+  </article>
 );
 
-// Separate component for Chamber of Commerce section
 const ChamberRequirementSection = () => (
-  <section className="py-16 px-4 bg-gray-50">
+  <section 
+    className="py-16 px-4 bg-gray-50"
+    aria-labelledby="requirements-title"
+    itemScope
+    itemType="https://schema.org/Service"
+  >
     <div className="container mx-auto max-w-6xl">
-      <div className="text-center mb-12">
-        <h6 className="text-[#0A9DB2] font-semibold mb-2">CHAMBER OF COMMERCE</h6>
-        <h2 className="text-3xl md:text-4xl font-bold mb-6">
+      <header className="text-center mb-12">
+        <p className="text-[#0A9DB2] font-semibold mb-2">CHAMBER OF COMMERCE</p>
+        <h2 
+          id="requirements-title"
+          className="text-3xl md:text-4xl font-bold mb-6"
+          itemProp="name"
+        >
           Why is Chamber of Commerce Attestation Required?
         </h2>
-        <div className="w-24 h-1 bg-[#0A9DB2] mx-auto mb-8"></div>
-      </div>
+        <div className="w-24 h-1 bg-[#0A9DB2] mx-auto mb-8" role="presentation"></div>
+      </header>
 
-      <div className="bg-white rounded-xl shadow-md p-8 border border-gray-200">
+      <div 
+        className="bg-white rounded-xl shadow-md p-8 border border-gray-200"
+        role="list"
+        aria-label="Attestation requirements"
+      >
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {chamberRequirements.map((item, index) => (
             <div key={index} className="flex items-start gap-4">
@@ -124,20 +142,60 @@ const ChamberRequirementSection = () => (
 export default function WhyChooseUs() {
   return (
     <>
-      <section className="py-16 px-4 bg-white">
+      <Head>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "MEA EXPERT",
+            "description": "Trusted attestation services for businesses across India",
+            "offers": features.map(feature => ({
+              "@type": "Offer",
+              "name": feature.title,
+              "description": feature.description
+            })),
+            "areaServed": "India",
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Chamber of Commerce Attestation Services",
+              "itemListElement": chamberRequirements.map(req => ({
+                "@type": "Service",
+                "name": req.text
+              }))
+            }
+          })}
+        </script>
+      </Head>
+      <section 
+        className="py-16 px-4 bg-white"
+        aria-labelledby="why-choose-title"
+        itemScope
+        itemType="https://schema.org/Organization"
+      >
         <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-12">
-            <h6 className="text-[#0A9DB2] font-semibold mb-2">WHY CHOOSE US</h6>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <header className="text-center mb-12">
+            <p className="text-[#0A9DB2] font-semibold mb-2">WHY CHOOSE US</p>
+            <h1 
+              id="why-choose-title"
+              className="text-3xl md:text-4xl font-bold mb-6"
+              itemProp="name"
+            >
               Why Choose MEA EXPERT?
-            </h2>
-            <div className="w-24 h-1 bg-[#0A9DB2] mx-auto mb-8"></div>
-            <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+            </h1>
+            <div className="w-24 h-1 bg-[#0A9DB2] mx-auto mb-8" role="presentation"></div>
+            <p 
+              className="text-lg text-gray-700 max-w-3xl mx-auto"
+              itemProp="description"
+            >
               Trusted attestation services for businesses across India
             </p>
-          </div>
+          </header>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div 
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+            role="list"
+            aria-label="Our features and benefits"
+          >
             {features.map((feature, index) => (
               <FeatureCard key={index} {...feature} />
             ))}
