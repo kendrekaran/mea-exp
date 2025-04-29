@@ -106,7 +106,7 @@ export default function AboutAttestation() {
 
           <figure className="relative w-full h-96 rounded-lg overflow-hidden shadow-md">
             <Image
-              src="https://i.pinimg.com/474x/1f/42/fc/1f42fc28efecaee5c63be08a301cf993.jpg"
+              src="/hrd.webp"
               alt="Detailed process of HRD document attestation"
               fill
               className="object-cover"

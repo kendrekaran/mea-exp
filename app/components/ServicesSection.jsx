@@ -26,7 +26,7 @@ export default function MEAServices() {
       id: 3,
       title: "HRD & Home Department",
       description: "State-level authentication of educational/personal documents (HRD, Home, SDM).",
-      image: "https://i.pinimg.com/474x/b4/71/fc/b471fc4dbf0e6f24ce7eb4094fbaa0a7.jpg",
+      image: "/hrd.webp",
       link: "/hrd-home-attestation"
     },
     {
@@ -40,7 +40,7 @@ export default function MEAServices() {
       id: 5,
       title: "Chamber of Commerce",
       description: "Attestation for commercial/corporate documents before MEA or embassy attestation.",
-      image: "https://i.pinimg.com/736x/30/e6/b1/30e6b115515715e460045adac676d27c.jpg",
+      image: "/chamber.webp",
       link: "/chamber-commerce"
     },
     {

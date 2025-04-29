@@ -164,7 +164,7 @@ export default function DocumentTypes() {
   const pageTitle = "Document Types Eligible for Apostille Services | Official Authentication";
   const pageDescription = "Learn about educational, personal, and commercial documents eligible for apostille attestation. Get official international authentication for degrees, certificates, and legal documents.";
 
-  const canonicalUrl = "https://yourdomain.com/documents-apostille";
+  const canonicalUrl = "https://meaexpert.com/documents-apostille";
 
   return (
     <>
@@ -179,13 +179,13 @@ export default function DocumentTypes() {
         <meta property="og:description" content={pageDescription} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={canonicalUrl} />
-        <meta property="og:image" content="https://yourdomain.com/images/apostille-services.jpg" />
+        <meta property="og:image" content="https://meaexpert.com/images/apostille-services.jpg" />
         
         {/* Twitter Card data */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={pageTitle} />
         <meta name="twitter:description" content={pageDescription} />
-        <meta name="twitter:image" content="https://yourdomain.com/images/apostille-services.jpg" />
+        <meta name="twitter:image" content="https://meaexpert.com/images/apostille-services.jpg" />
         
         {/* Schema.org structured data */}
         <script 

@@ -16,7 +16,7 @@ export default function AboutAttestation() {
             "description": "Learn about Embassy Attestation process, its importance for visa issuance, and requirements for countries like UAE, Saudi Arabia, and Qatar.",
             "mainEntityOfPage": {
               "@type": "WebPage",
-              "@id": "https://yourdomain.com/embassy-attestation"
+              "@id": "https://meaexpert.com/embassy-attestation"
             }
           })}
         </script>

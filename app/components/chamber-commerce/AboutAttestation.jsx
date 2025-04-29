@@ -34,7 +34,7 @@ export default function AboutAttestation() {
             "description": "Learn about Chamber of Commerce attestation process, document legitimacy, and international requirements for business documents.",
             "mainEntityOfPage": {
               "@type": "WebPage",
-              "@id": "https://yourdomain.com/chamber-commerce-attestation"
+              "@id": "https://meaexpert.com/chamber-commerce-attestation"
             }
           })}
         </script>
@@ -66,7 +66,7 @@ export default function AboutAttestation() {
           
           <figure className="order-1 md:order-2 relative w-full h-[350px] md:h-[450px] rounded-xl overflow-hidden shadow-lg">
             <Image
-              src="https://i.pinimg.com/736x/6f/d9/01/6fd901385758def2fd4704e47dbae77a.jpg"
+              src="/chamber.webp"
               alt="Official process of Chamber of Commerce document attestation and verification"
               fill
               className="object-cover"
