@@ -1,7 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import SmoothScroll from "./components/SmoothScroll";
 import WhatsAppButton from "./components/WhatsAppButton";
+import ScrollToTop from "./components/ScrollToTop";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -144,10 +144,9 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <SmoothScroll>
-          <WhatsAppButton />
-          {children}
-        </SmoothScroll>
+        <ScrollToTop />
+        <WhatsAppButton />
+        {children}
       </body>
     </html>
   );

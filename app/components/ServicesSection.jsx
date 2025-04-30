@@ -110,7 +110,7 @@ export default function MEAServices() {
   }, [jsonLd]); // Add jsonLd as dependency
 
   return (
-    <section className="py-16 md:pb-16 md:py-0" aria-label="MEA Services Section">
+    <section className="py-16 md:pb-16 md:py-32" aria-label="MEA Services Section">
       <Head>
         <title>MEA Attestation & Apostille Services in India | Document Authentication</title>
         <meta name="description" content="Professional MEA attestation, apostille, and document authentication services across India. Expert assistance for visa, immigration, and educational documents." />

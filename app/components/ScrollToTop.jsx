@@ -6,11 +6,8 @@ export default function ScrollToTop() {
   const pathname = usePathname();
 
   useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: 'smooth'
-    });
+    // Scroll to top immediately on page change
+    window.scrollTo(0, 0);
   }, [pathname]);
 
   return null;
