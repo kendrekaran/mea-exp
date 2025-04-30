@@ -15,7 +15,7 @@ export default function StatsSection() {
     },
     {
       icon: "/stats2.svg",
-      value: 120,
+      value: 400,
       label: "Doc. Submitted Today",
       format: "normal",
       altText: "Today's document submissions statistics icon"

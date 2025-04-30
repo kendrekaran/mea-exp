@@ -76,7 +76,7 @@ const ContactPage = () => {
                   <div>
                     <h3 className="font-semibold text-gray-900 text-lg">Our Address</h3>
                     <p className="text-gray-600 mt-2 leading-relaxed">
-                      MEA EXPERT<br />
+                      MEA EXPERT (TGA SERVICES) <br />
                       MB-03, A-Block Naurang House,<br />
                       K.G. Marg Connaught Place,<br />
                       New Delhi -110001
