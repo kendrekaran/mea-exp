@@ -99,7 +99,7 @@ function FeaturesSection() {
           <header className="text-center mb-8">
             <h3 className="text-xl poppins-medium mb-2">Safe. Fast. Reliable</h3>
             <h2 className="text-5xl poppins-medium mb-4">
-              <span className="text-black">Why people Trust Us</span>poppins-medium mb-6"
+              <span className="text-black">Why people Trust Us </span>
               <span className="text-black">for their</span>
               <span className="text-[#0A9DB2]"> Documents</span>
             </h2>

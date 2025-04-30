@@ -295,7 +295,7 @@ const Navbar = () => {
               )}
             </div>
 
-            <Link href="#country" className="text-lg  text-gray-700 transition-colors hover:text-[#0A9DB2] font-semibold">
+            <Link href="/countries" className="text-lg  text-gray-700 transition-colors hover:text-[#0A9DB2] font-semibold">
               Countries
             </Link>
             
