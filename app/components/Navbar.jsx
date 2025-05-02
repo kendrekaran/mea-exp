@@ -186,6 +186,7 @@ const Navbar = () => {
 
       <header className="fixed w-full top-0 left-0 right-0 border-b border-gray-100 bg-[#f9f9f9] z-50 shadow-sm">
         <div className="container mx-auto flex flex-col items-center justify-between px-4 py-3 md:flex-row md:py-4">
+          {/* Logo and hamburger section */}
           <div className="flex w-full items-center justify-between md:w-auto">
             <Link href="/" className="flex items-center" aria-label="MEA Expert Home">
               <Image
@@ -215,6 +216,7 @@ const Navbar = () => {
             </button>
           </div>
 
+          {/* Navigation section */}
           <nav 
             className={`${isMenuOpen ? "flex" : "hidden"} w-full flex-col items-center space-y-4 md:flex md:w-auto md:flex-row md:space-x-4 lg:space-x-8 md:space-y-0`}
             role="navigation"
@@ -225,10 +227,10 @@ const Navbar = () => {
             </Link>
             
             {/* Services Dropdown */}
-            <div className="relative" ref={servicesDropdownRef}>
+            <div className="relative w-full md:w-auto" ref={servicesDropdownRef}>
               <button
                 onClick={handleServicesClick}
-                className="text-lg flex font-semibold text-gray-700 transition-colors hover:text-[#0A9DB2]"
+                className="text-lg flex w-full md:w-auto justify-center md:justify-start font-semibold text-gray-700 transition-colors hover:text-[#0A9DB2]"
                 aria-expanded={isServicesOpen}
                 aria-controls="services-dropdown"
               >
@@ -237,7 +239,7 @@ const Navbar = () => {
               </button>
 
               {isServicesOpen && (
-                <div id="services-dropdown" className="absolute left-0 mt-2 w-screen max-w-md bg-white rounded-lg shadow-lg z-50" role="menu">
+                <div id="services-dropdown" className="fixed md:absolute left-0 md:left-auto right-0 mt-2 w-full md:w-screen max-w-md bg-white rounded-lg shadow-lg z-50 max-h-[60vh] overflow-y-auto" role="menu">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4">
                     {services.map((service) => (
                       <a
@@ -259,10 +261,10 @@ const Navbar = () => {
             </div>
 
             {/* Documents Dropdown */}
-            <div className="relative" ref={documentsDropdownRef}>
+            <div className="relative w-full md:w-auto" ref={documentsDropdownRef}>
               <button
                 onClick={handleDocumentsClick}
-                className="text-lg flex font-semibold text-gray-700 transition-colors hover:text-[#0A9DB2]"
+                className="text-lg flex w-full md:w-auto justify-center md:justify-start font-semibold text-gray-700 transition-colors hover:text-[#0A9DB2]"
                 aria-expanded={isDocumentsOpen}
                 aria-controls="documents-dropdown"
               >
@@ -274,7 +276,7 @@ const Navbar = () => {
               </button>
 
               {isDocumentsOpen && (
-                <div id="documents-dropdown" className="absolute left-0 mt-2 w-screen max-w-md bg-white rounded-lg shadow-lg z-50" role="menu">
+                <div id="documents-dropdown" className="fixed md:absolute left-0 md:left-auto right-0 mt-2 w-full md:w-screen max-w-md bg-white rounded-lg shadow-lg z-50 max-h-[60vh] overflow-y-auto" role="menu">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4">
                     {documents.map((document) => (
                       <a
@@ -295,7 +297,7 @@ const Navbar = () => {
               )}
             </div>
 
-            <Link href="/countries" className="text-lg  text-gray-700 transition-colors hover:text-[#0A9DB2] font-semibold">
+            <Link href="/countries" className="text-lg text-gray-700 transition-colors hover:text-[#0A9DB2] font-semibold">
               Countries
             </Link>
             
@@ -304,6 +306,7 @@ const Navbar = () => {
             </Link>
           </nav>
 
+          {/* Contact button */}
           <div className={`${isMenuOpen ? "flex" : "hidden"} mt-5 w-full justify-center md:mt-0 md:flex md:w-auto`}>
             <Link
               href="/contact"
@@ -314,7 +317,6 @@ const Navbar = () => {
           </div>
         </div>
       </header>
-      {/* Add a spacer to prevent content from hiding behind fixed navbar */}
       <div className="h-[72px] md:h-[80px] lg:h-[96px]"></div>
     </>
   );
