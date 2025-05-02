@@ -1,146 +1,127 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Main Routes -->
   <url>
     <loc>https://meaexpert.com</loc>
-    <lastmod>2024-01-18</lastmod>
+    <lastmod>2025-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://meaexpert.com/contact</loc>
-    <lastmod>2024-01-18</lastmod>
+    <lastmod>2025-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- Main Service Pages -->
   <url>
     <loc>https://meaexpert.com/mea-attestation</loc>
-    <lastmod>2024-01-18</lastmod>
+    <lastmod>2025-05-03</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://meaexpert.com/embassy-attestation</loc>
-    <lastmod>2024-01-18</lastmod>
+    <lastmod>2025-05-03</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://meaexpert.com/apostille</loc>
-    <lastmod>2024-01-18</lastmod>
+    <lastmod>2025-05-03</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://meaexpert.com/hrd-home-attestation</loc>
-    <lastmod>2024-01-18</lastmod>
+    <lastmod>2025-05-03</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://meaexpert.com/chamber-commerce</loc>
-    <lastmod>2024-01-18</lastmod>
+    <lastmod>2025-05-03</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://meaexpert.com/visa-immigration</loc>
-    <lastmod>2024-01-18</lastmod>
+    <lastmod>2025-05-03</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://meaexpert.com/study-abroad</loc>
-    <lastmod>2024-01-18</lastmod>
+    <lastmod>2025-05-03</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://meaexpert.com/travel-documentation</loc>
-    <lastmod>2024-01-18</lastmod>
+    <lastmod>2025-05-03</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://meaexpert.com/translation</loc>
-    <lastmod>2024-01-18</lastmod>
+    <lastmod>2025-05-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://meaexpert.com/countries</loc>
+    <lastmod>2025-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- Apostille Sub-Routes -->
   <url>
     <loc>https://meaexpert.com/apostille/birth</loc>
-    <lastmod>2024-01-18</lastmod>
+    <lastmod>2025-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://meaexpert.com/apostille/degree</loc>
-    <lastmod>2024-01-18</lastmod>
+    <lastmod>2025-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://meaexpert.com/apostille/marriage</loc>
-    <lastmod>2024-01-18</lastmod>
+    <lastmod>2025-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://meaexpert.com/apostille/power-attorney</loc>
-    <lastmod>2024-01-18</lastmod>
+    <lastmod>2025-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://meaexpert.com/apostille/single</loc>
-    <lastmod>2024-01-18</lastmod>
+    <lastmod>2025-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://meaexpert.com/apostille/driving-license</loc>
-    <lastmod>2024-01-18</lastmod>
+    <lastmod>2025-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://meaexpert.com/apostille/gst</loc>
-    <lastmod>2024-01-18</lastmod>
+    <lastmod>2025-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://meaexpert.com/apostille/police-clearance</loc>
-    <lastmod>2024-01-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://meaexpert.com/embassy-attestation/commercial</loc>
-    <lastmod>2024-01-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://meaexpert.com/embassy-attestation/educational</loc>
-    <lastmod>2024-01-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://meaexpert.com/mea-attestation/commercial</loc>
-    <lastmod>2024-01-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://meaexpert.com/mea-attestation/educational</loc>
-    <lastmod>2024-01-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://meaexpert.com/hrd-home-attestation/education</loc>
-    <lastmod>2024-01-18</lastmod>
+    <lastmod>2025-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
