@@ -92,7 +92,7 @@ export default function BlogPost({ params }) {
   };
   
   return (
-    <div className="bg-gray-50 text-gray-600 min-h-screen  mt-[-80] md:mt-[-96px] ">
+    <div className="bg-gray-50 text-gray-600 min-h-screen  mt-[-80] md:mt-[-96] ">
       {/* Hero section */}
       <div className="bg-gradient-to-r from-[#0A9DB2] to-[#0A9DB2] text-white py-12 md:px-24">
         <div className="container mx-auto px-4">
