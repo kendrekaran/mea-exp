@@ -297,10 +297,6 @@ const Navbar = () => {
               )}
             </div>
 
-            
-            <Link href="/study-abroad" className="text-lg font-semibold text-gray-700 transition-colors hover:text-[#0A9DB2]">
-              Abroad Study
-            </Link>
 
             <Link href="/blog" className="text-lg font-semibold text-gray-700 transition-colors hover:text-[#0A9DB2]">
               Blogs

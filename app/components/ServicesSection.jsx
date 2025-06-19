@@ -58,14 +58,6 @@ export default function MEAServices() {
       link: "/visa-immigration"
     },
     {
-      id: 8,
-      title: "Study Abroad",
-      description: "Focused on students: document attestation, apostille, visa help, university application support.",
-      image: "https://i.pinimg.com/474x/2a/12/20/2a1220bd30d4a7b794c32d917eba439d.jpg",
-      link: "/study-abroad"
-
-    },
-    {
       id: 10,
       title: "Travel Documentation",
       description: "Visa-compliant travel insurance, dummy tickets with verifiable PNR, and verified itineraries for Schengen, US, UK, and more.",
