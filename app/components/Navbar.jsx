@@ -50,12 +50,6 @@ const services = [
     link: '/visa-immigration'
   },
   {
-    id: 8,
-    title: 'Study Abroad Assistance',
-    description: 'Comprehensive support for international education',
-    link: '/study-abroad'
-  },
-  {
     id: 9,
     title: 'Travel Documentation',
     description: 'Comprehensive travel insurance coverage for your peace of mind',

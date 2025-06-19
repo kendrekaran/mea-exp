@@ -76,7 +76,6 @@ export default function FooterSection() {
                 <li><a href="/chamber-commerce" className="hover:text-white">Chamber of Commerce Attestation</a></li>
                 <li><a href="/translation" className="hover:text-white">Translation Services</a></li>
                 <li><a href="/visa-immigration" className="hover:text-white">Visa & Immigration Assistance</a></li>
-                <li><a href="/study-abroad" className="hover:text-white">Study Abroad Support</a></li>
                 <li><a href="/travel-documentation" className="hover:text-white">Travel Documentation Services</a></li>
               </ul>
             </div>
