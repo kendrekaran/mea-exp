@@ -1,0 +1,25 @@
+# Copy this content to your .env.local file
+# Create a file named .env.local in your project root and paste this content:
+
+# Google Sheets Integration with Service Account (REQUIRED)
+GOOGLE_SERVICE_ACCOUNT_EMAIL=your-service-account@your-project.iam.gserviceaccount.com
+GOOGLE_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\nYOUR_PRIVATE_KEY_HERE\n-----END PRIVATE KEY-----\n"
+GOOGLE_SHEET_ID=your_google_sheet_id_here
+GOOGLE_SHEET_NAME=Contact Form Submissions
+
+# Development
+NODE_ENV=development
+
+# Instructions:
+# 1. Create a Google Service Account (see setup guide below)
+# 2. Replace 'your-service-account@...' with your service account email
+# 3. Replace 'YOUR_PRIVATE_KEY_HERE' with your service account private key
+# 4. Replace 'your_google_sheet_id_here' with your Google Sheet ID
+# 5. Share your Google Sheet with the service account email
+
+# IMPORTANT: Keep the quotes around the GOOGLE_PRIVATE_KEY value!
+
+# Example format (DO NOT USE THESE - GET YOUR OWN):
+# GOOGLE_SERVICE_ACCOUNT_EMAIL=contact-form@my-project-123456.iam.gserviceaccount.com
+# GOOGLE_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC...\n-----END PRIVATE KEY-----\n"
+# GOOGLE_SHEET_ID=1BxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxABCDEF 

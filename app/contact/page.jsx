@@ -1,4 +1,5 @@
 import { MapPin, Phone, Mail, Clock, Facebook, Instagram, ArrowRight, MessageSquare } from "lucide-react";
+import ContactForm from "../components/ContactForm";
 
 export const metadata = {
   title: "Contact MEA Expert | Professional Document Attestation Services",
@@ -214,6 +215,9 @@ const ContactPage = () => {
               </div>
             </div>
           </div>
+          
+          {/* Contact Form */}
+          <ContactForm />
         </div>
       </div>
     </div>
